@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'BatmanForeverAlternate';
+  src: url('/fonts/batman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@layer base {
+  :root {
+    /* DARK THEME (RGB Channels) */
+    --color-bg: 2 6 23;
+    /* #020617 */
+    --color-card: 2 6 23;
+    /* #020617 (Base for Glass) */
+    --color-lighter: 30 41 59;
+    /* #1e293b */
+    --color-text: 248 250 252;
+    /* #f8fafc */
+    --color-muted: 148 163 184;
+    /* #94a3b8 */
+    --color-accent: 59 130 246;
+    /* #3B82F6 */
+    --color-border: 255 255 255;
+    /* White (Opacity handled in config) */
+  }
+
+  .light {
+    /* LIGHT THEME (RGB Channels) */
+    --color-bg: 243 244 246;
+    /* #f3f4f6 */
+    --color-card: 255 255 255;
+    /* #ffffff */
+    --color-lighter: 229 231 235;
+    /* #e5e7eb */
+    --color-text: 17 24 39;
+    /* #111827 */
+    --color-muted: 107 114 128;
+    /* #6b7280 */
+    --color-accent: 37 99 235;
+    /* #2563eb */
+    --color-border: 209 213 219;
+    /* #d1d5db */
+  }
+
+  body {
+    @apply bg-neuro-bg text-neuro-text font-sans antialiased;
+    /* Force dark background by default */
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-neuro-card/70 backdrop-blur-md border border-neuro-border;
+    backdrop-filter: blur(12px);
+  }
+
+  .glass-button {
+    @apply bg-blue-500/10 hover:bg-blue-500/20 active:bg-blue-500/30 backdrop-blur-sm border border-blue-500/20 transition-all duration-200 text-neuro-accent;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neuro-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-400/50 dark:bg-slate-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-500 dark:bg-slate-600;
+}

@@ -1,0 +1,431 @@
+{
+    "nodes": [
+        {
+            "id": "Alice Johnson",
+            "user": "Alice Johnson",
+            "risk": 69,
+            "accountNumber": "AN_A",
+            "color": "#EA580C"
+        },
+        {
+            "id": "Bob Brown",
+            "user": "Bob Brown",
+            "risk": 2,
+            "accountNumber": "AN_B",
+            "color": "#EA580C"
+        },
+        {
+            "id": "Charlie Davis",
+            "user": "Charlie Davis",
+            "risk": 58,
+            "accountNumber": "AN_C",
+            "color": "#EA580C"
+        },
+        {
+            "id": "David Smith",
+            "user": "David Smith",
+            "risk": 3,
+            "accountNumber": "AN_D",
+            "color": "#EA580C"
+        },
+        {
+            "id": "Xavier",
+            "user": "Xavier",
+            "risk": 1,
+            "accountNumber": "AN_X",
+            "color": "#EA580C"
+        },
+        {
+            "id": "Yara",
+            "user": "Yara",
+            "risk": 46,
+            "accountNumber": "AN_Y",
+            "color": "#EA580C"
+        },
+        {
+            "id": "Zack",
+            "user": "Zack",
+            "risk": 86,
+            "accountNumber": "AN_Z",
+            "color": "#EA580C"
+        },
+        {
+            "id": "Eve Wilson",
+            "user": "Eve Wilson",
+            "risk": 17,
+            "accountNumber": "AN_E",
+            "color": "#EA580C"
+        },
+        {
+            "id": "User1",
+            "user": "User1",
+            "risk": 29,
+            "accountNumber": "AN_1",
+            "color": "#EA580C"
+        },
+        {
+            "id": "User2",
+            "user": "User2",
+            "risk": 64,
+            "accountNumber": "AN_2",
+            "color": "#EA580C"
+        },
+        {
+            "id": "User3",
+            "user": "User3",
+            "risk": 2,
+            "accountNumber": "AN_3",
+            "color": "#EA580C"
+        },
+        {
+            "id": "Frank Lee",
+            "user": "Frank Lee",
+            "risk": 58,
+            "accountNumber": "AN_F",
+            "color": "#EA580C"
+        },
+        {
+            "id": "Grace Ho",
+            "user": "Grace Ho",
+            "risk": 84,
+            "accountNumber": "AN_G",
+            "color": "#EA580C"
+        },
+        {
+            "id": "Hank M",
+            "user": "Hank M",
+            "risk": 86,
+            "accountNumber": "AN_H",
+            "color": "#EA580C"
+        }
+    ],
+    "links": [
+        {
+            "source": "Alice Johnson",
+            "target": "Alice Johnson",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T04:30:00.000Z"
+        },
+        {
+            "source": "Bob Brown",
+            "target": "Bob Brown",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T04:35:00.000Z"
+        },
+        {
+            "source": "Charlie Davis",
+            "target": "Charlie Davis",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T04:40:00.000Z"
+        },
+        {
+            "source": "David Smith",
+            "target": "David Smith",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T04:45:00.000Z"
+        },
+        {
+            "source": "Xavier",
+            "target": "Xavier",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T05:30:00.000Z"
+        },
+        {
+            "source": "Yara",
+            "target": "Yara",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T05:35:00.000Z"
+        },
+        {
+            "source": "Zack",
+            "target": "Zack",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T05:40:00.000Z"
+        },
+        {
+            "source": "Eve Wilson",
+            "target": "Eve Wilson",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T05:45:00.000Z"
+        },
+        {
+            "source": "User1",
+            "target": "User1",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T06:30:00.000Z"
+        },
+        {
+            "source": "User2",
+            "target": "User2",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T06:35:00.000Z"
+        },
+        {
+            "source": "User3",
+            "target": "User3",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T06:40:00.000Z"
+        },
+        {
+            "source": "Frank Lee",
+            "target": "Frank Lee",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T06:45:00.000Z"
+        },
+        {
+            "source": "Alice Johnson",
+            "target": "Bob Brown",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T04:32:00.000Z"
+        },
+        {
+            "source": "Bob Brown",
+            "target": "Charlie Davis",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T04:37:00.000Z"
+        },
+        {
+            "source": "Charlie Davis",
+            "target": "Alice Johnson",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T04:42:00.000Z"
+        },
+        {
+            "source": "Xavier",
+            "target": "Yara",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T05:32:00.000Z"
+        },
+        {
+            "source": "Yara",
+            "target": "Zack",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T05:37:00.000Z"
+        },
+        {
+            "source": "Zack",
+            "target": "Xavier",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T05:42:00.000Z"
+        },
+        {
+            "source": "Grace Ho",
+            "target": "Grace Ho",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T07:30:00.000Z"
+        },
+        {
+            "source": "Hank M",
+            "target": "Hank M",
+            "color": "#FACC15",
+            "timestamp": "2024-02-19T08:30:00.000Z"
+        }
+    ],
+    "transactions": [
+        {
+            "id": "tx-0-1771563710773",
+            "source": "Alice Johnson",
+            "target": "Alice Johnson",
+            "amount": 1000,
+            "timestamp": "2024-02-19T04:30:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-12-1771563710788",
+            "source": "Alice Johnson",
+            "target": "Bob Brown",
+            "amount": 1000,
+            "timestamp": "2024-02-19T04:32:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-1-1771563710774",
+            "source": "Bob Brown",
+            "target": "Bob Brown",
+            "amount": 1000,
+            "timestamp": "2024-02-19T04:35:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-13-1771563710788",
+            "source": "Bob Brown",
+            "target": "Charlie Davis",
+            "amount": 1000,
+            "timestamp": "2024-02-19T04:37:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-2-1771563710777",
+            "source": "Charlie Davis",
+            "target": "Charlie Davis",
+            "amount": 1000,
+            "timestamp": "2024-02-19T04:40:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-14-1771563710788",
+            "source": "Charlie Davis",
+            "target": "Alice Johnson",
+            "amount": 1000,
+            "timestamp": "2024-02-19T04:42:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-3-1771563710783",
+            "source": "David Smith",
+            "target": "David Smith",
+            "amount": 50,
+            "timestamp": "2024-02-19T04:45:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-4-1771563710787",
+            "source": "Xavier",
+            "target": "Xavier",
+            "amount": 500,
+            "timestamp": "2024-02-19T05:30:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-15-1771563710788",
+            "source": "Xavier",
+            "target": "Yara",
+            "amount": 500,
+            "timestamp": "2024-02-19T05:32:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-5-1771563710787",
+            "source": "Yara",
+            "target": "Yara",
+            "amount": 500,
+            "timestamp": "2024-02-19T05:35:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-16-1771563710788",
+            "source": "Yara",
+            "target": "Zack",
+            "amount": 500,
+            "timestamp": "2024-02-19T05:37:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-6-1771563710787",
+            "source": "Zack",
+            "target": "Zack",
+            "amount": 500,
+            "timestamp": "2024-02-19T05:40:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-17-1771563710788",
+            "source": "Zack",
+            "target": "Xavier",
+            "amount": 500,
+            "timestamp": "2024-02-19T05:42:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-7-1771563710787",
+            "source": "Eve Wilson",
+            "target": "Eve Wilson",
+            "amount": 200,
+            "timestamp": "2024-02-19T05:45:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-8-1771563710787",
+            "source": "User1",
+            "target": "User1",
+            "amount": 300,
+            "timestamp": "2024-02-19T06:30:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-9-1771563710787",
+            "source": "User2",
+            "target": "User2",
+            "amount": 300,
+            "timestamp": "2024-02-19T06:35:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-10-1771563710787",
+            "source": "User3",
+            "target": "User3",
+            "amount": 300,
+            "timestamp": "2024-02-19T06:40:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-11-1771563710787",
+            "source": "Frank Lee",
+            "target": "Frank Lee",
+            "amount": 100,
+            "timestamp": "2024-02-19T06:45:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-18-1771563710788",
+            "source": "Grace Ho",
+            "target": "Grace Ho",
+            "amount": 1000,
+            "timestamp": "2024-02-19T07:30:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        },
+        {
+            "id": "tx-19-1771563710788",
+            "source": "Hank M",
+            "target": "Hank M",
+            "amount": 12.5,
+            "timestamp": "2024-02-19T08:30:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "isLoop": false
+        }
+    ],
+    "metadata": {
+        "minDate": "2024-02-19T04:30:00.000Z",
+        "maxDate": "2024-02-19T08:30:00.000Z",
+        "recordCount": 20
+    }
+}
