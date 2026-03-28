@@ -6,6 +6,7 @@ const AdminManagement = () => {
     const [showAddModal, setShowAddModal] = useState(false);
     const [showVerifyModal, setShowVerifyModal] = useState(false);
     const [verifyingEmail, setVerifyingEmail] = useState('');
+    const [verifyingCode, setVerifyingCode] = useState('');
     const [otpCode, setOtpCode] = useState('');
     const [newAdmin, setNewAdmin] = useState({
         name: '',
@@ -21,7 +22,7 @@ const AdminManagement = () => {
 
     const fetchAdmins = async () => {
         try {
-            const response = await fetch('http://localhost:5001/api/admins');
+            const response = await fetch('/api/admins');
             const data = await response.json();
             setAdmins(data);
         } catch (err) {
@@ -37,7 +38,7 @@ const AdminManagement = () => {
         e.preventDefault();
         setError('');
         try {
-            const response = await fetch('http://localhost:5001/api/admins', {
+            const response = await fetch('/api/admins', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newAdmin)
@@ -65,7 +66,7 @@ const AdminManagement = () => {
         e.preventDefault();
         setError('');
         try {
-            const response = await fetch('http://localhost:5001/api/admins/verify', {
+            const response = await fetch('/api/admins/verify', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email: verifyingEmail, code: otpCode })
@@ -92,7 +93,7 @@ const AdminManagement = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5001/api/admins/${id}`, {
+            const response = await fetch(`/api/admins/${id}`, {
                 method: 'DELETE'
             });
 
@@ -167,7 +168,11 @@ const AdminManagement = () => {
                                     <div style={{ display: 'flex', gap: '0.5rem' }}>
                                         {admin.status !== 'active' && (
                                             <button
-                                                onClick={() => { setVerifyingEmail(admin.email); setShowVerifyModal(true); }}
+                                                onClick={() => { 
+                                                    setVerifyingEmail(admin.email); 
+                                                    setVerifyingCode(admin.verification_code);
+                                                    setShowVerifyModal(true); 
+                                                }}
                                                 style={{ background: 'var(--primary-color)', color: 'white', padding: '0.25rem 0.5rem', borderRadius: '4px', fontSize: '0.75rem' }}
                                             >
                                                 Verify
@@ -297,7 +302,13 @@ const AdminManagement = () => {
                 }}>
                     <div className="glass-panel" style={{ width: '400px', padding: '2rem', background: '#1e293b' }}>
                         <h2 style={{ marginBottom: '1rem' }}>Verify Admin</h2>
-                        <p style={{ marginBottom: '1.5rem', fontSize: '0.875rem' }}>Enter 6-digit code for <b>{verifyingEmail}</b></p>
+                        <p style={{ marginBottom: '1rem', fontSize: '0.875rem' }}>Enter 6-digit code for <b>{verifyingEmail}</b></p>
+                        {verifyingCode && (
+                            <div style={{ background: 'rgba(99, 102, 241, 0.1)', padding: '0.75rem', borderRadius: '8px', textAlign: 'center', marginBottom: '1.5rem', border: '1px dashed #6366f1' }}>
+                                <span style={{ color: '#94a3b8', fontSize: '0.75rem', display: 'block' }}>TEMPORARY CODE FOR TESTING:</span>
+                                <span style={{ color: '#6366f1', fontSize: '1.25rem', fontWeight: 'bold', letterSpacing: '0.3rem' }}>{verifyingCode}</span>
+                            </div>
+                        )}
                         {error && <p style={{ color: '#ef4444', marginBottom: '1rem', fontSize: '0.875rem' }}>{error}</p>}
                         <form onSubmit={handleVerify}>
                             <input
