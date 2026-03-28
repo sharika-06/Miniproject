@@ -2,7 +2,7 @@ import { ArrowUpRight, ArrowDownLeft } from 'lucide-react';
 
 export function TransactionTable({ transactions, onRowClick }) {
     return (
-        <div className="flex-1 bg-neuro-card border-t border-neuro-border overflow-auto custom-scrollbar animate-fade-in-up">
+        <div className="h-full w-full bg-neuro-card border-t border-neuro-border overflow-y-auto custom-scrollbar animate-fade-in-up">
             <table className="w-full text-left border-collapse">
                 <thead className="bg-neuro-lighter sticky top-0 z-10">
                     <tr>
@@ -21,7 +21,7 @@ export function TransactionTable({ transactions, onRowClick }) {
                             onClick={() => onRowClick && onRowClick(tx)}
                             className="hover:bg-neuro-lighter/10 cursor-pointer transition-colors"
                         >
-                            <td className="p-3 text-sm text-neuro-text font-mono">2023-10-24 10:42 PM</td>
+                            <td className="p-3 text-sm text-neuro-text font-mono">{new Date(tx.timestamp).toLocaleString()}</td>
                             <td className="p-3 text-sm text-neuro-text">{tx.source?.id || tx.source}</td>
                             <td className="p-3 text-sm text-neuro-text">
                                 <span className="flex items-center gap-1">
@@ -34,12 +34,12 @@ export function TransactionTable({ transactions, onRowClick }) {
                                 <span className="bg-blue-500/10 text-blue-400 border border-blue-500/20 px-2 py-0.5 rounded">Transfer</span>
                             </td>
                             <td className="p-3 text-xs">
-                                {tx.isLoop ? (
-                                    <span className="bg-red-500/10 text-red-400 border border-red-500/20 px-2 py-0.5 rounded flex w-fit items-center gap-1">
-                                        ⚠️ Suspicious
+                                {tx.status === 'Suspicious' || tx.isLoop ? (
+                                    <span className="bg-red-500/10 text-red-400 border-red-500/20 px-2 py-0.5 rounded flex w-fit items-center gap-1">
+                                        ⚠️ {tx.status || 'Suspicious'}
                                     </span>
                                 ) : (
-                                    <span className="text-green-500">Completed</span>
+                                    <span className="text-green-500">{tx.status || 'Completed'}</span>
                                 )}
                             </td>
                         </tr>
