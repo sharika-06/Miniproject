@@ -1054,17 +1054,21 @@ app.post('/api/ai/chat', (req, res) => {
 });
 
 // --- Serve Static Frontend (Production) ---
-const frontendPath = path.join(__dirname, '../frontend/dist');
-app.use(express.static(frontendPath));
 
-// Catch-all route to serve index.html for SPA routing
-app.use((req, res) => {
-    // Only serve index.html if it's not an API request
-    if (!req.url.startsWith('/api')) {
-        res.sendFile(path.join(frontendPath, 'index.html'));
-    } else {
-        res.status(404).json({ success: false, message: 'API route not found' });
-    }
+// Serve Admin Portal frontend on /dashboard
+app.use('/dashboard', express.static(path.join(__dirname, '../../../admin_portal/frontend/dist')));
+
+// Serve Main Frontend statically
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+// Catch-all for Admin Portal React router
+app.get('/dashboard/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../../admin_portal/frontend/dist', 'index.html'));
+});
+
+// Catch-all route to serve the SPA for the Main App
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
 });
 
 app.listen(PORT, () => {
