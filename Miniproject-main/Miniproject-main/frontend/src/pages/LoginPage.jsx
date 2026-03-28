@@ -23,6 +23,9 @@ export default function LoginPage() {
         try {
             const data = await api.login(formData.mailId, formData.password);
             if (data.success) {
+                // Trigger OTP Send
+                await api.sendOtp(formData.mailId);
+                
                 // Store user info
                 localStorage.setItem('userEmail', formData.mailId);
                 // Extract name from email (e.g. "john.doe@..." -> "John Doe")
@@ -30,24 +33,8 @@ export default function LoginPage() {
                 localStorage.setItem('userName', name);
 
                 // Check Role for Redirection
-                // FIX: Strict Redirect - Only admin@neugraph.com goes to Admin Portal
-                if (data.user.email === 'admin@neugraph.com' || formData.mailId === 'admin@neugraph.com') {
-                    // Prepare data for Admin Portal (mimic its auth response)
-                    // It expects: { id, name, email, role } stored in 'user' key
-                    const adminData = {
-                        name: data.user.name,
-                        email: data.user.email,
-                        role: data.user.role,
-                        id: 1 // Dummy ID since main backend doesn't trigger it, usually fine for frontend display
-                    };
-                    localStorage.setItem('user', JSON.stringify(adminData));
-
-                    // Redirect to Admin Portal
-                    window.location.href = 'http://localhost:5174/dashboard';
-                } else {
-                    // Regular User Flow
-                    navigate('/verify', { state: { mailId: formData.mailId } });
-                }
+                // Pass user object to verify page for role-based redirection logic
+                navigate('/verify', { state: { mailId: formData.mailId, user: data.user } });
             } else {
                 alert('Invalid credentials (try: password123)');
             }
