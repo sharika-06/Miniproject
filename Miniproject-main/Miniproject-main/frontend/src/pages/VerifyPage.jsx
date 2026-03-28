@@ -7,6 +7,7 @@ export default function VerifyPage() {
     const navigate = useNavigate();
     const location = useLocation();
     const mailId = location.state?.mailId || 'your email'; // Fallback if direct access
+    const user = location.state?.user;
 
     const [otp, setOtp] = useState(['', '', '', '', '', '']);
     const [timer, setTimer] = useState(119); // 1:59 in seconds
@@ -16,19 +17,12 @@ export default function VerifyPage() {
     const inputRefs = useRef([]);
     const hasFetched = useRef(false); // Ref to prevent double-firing in Strict Mode
 
-    // 1. Simulate Sending OTP on Component Mount
+    // 1. Sending OTP (Handled by LoginPage now)
     useEffect(() => {
         if (hasFetched.current) return;
         hasFetched.current = true;
-
-        // Generate random 6-digit code
-        const code = Math.floor(100000 + Math.random() * 900000).toString();
-        setGeneratedOtp(code);
-
-        // "Send" Email (Simulated)
-        console.log(`[SIMULATION] Email sent to ${mailId}. Your OTP code is: ${code}`);
-        // Small delay to ensure UI is ready before alert
-        setTimeout(() => alert(`(Demo) OTP sent to ${mailId}: ${code}`), 100);
+        
+        console.log(`[FRONTEND] OTP was sent to ${mailId} via LoginPage`);
     }, [mailId]);
 
     // 2. Timer Countdown Logic
@@ -80,13 +74,26 @@ export default function VerifyPage() {
             return;
         }
 
-        // Validate strictly against the OTP shown in the dialog
-        if (enteredCode === generatedOtp) {
-            // Success
-            navigate('/upload');
-        } else {
-            console.warn(`[OTP Fail] Expected: ${generatedOtp}, Got: ${enteredCode}`);
-            setError('Invalid OTP. Please enter the code shown in the alert.');
+        try {
+            const data = await api.verifyOtp(mailId, enteredCode);
+            if (data.success) {
+                // Success
+                if (user && user.role === 'superadmin') {
+                    // Redirect to Admin Portal with session data (relative path for unified deployment)
+                    const sessionData = btoa(JSON.stringify(user));
+                    window.location.href = `/dashboard?session=${sessionData}`;
+                } else if (user && user.role === 'admin') {
+                    // Navigate to csv upload page first
+                    navigate('/upload');
+                } else {
+                    navigate('/upload');
+                }
+            } else {
+                setError(data.message || 'Invalid OTP. Please check your email.');
+            }
+        } catch (err) {
+            console.error(err);
+            setError('Verification failed. Server error.');
         }
     };
 
