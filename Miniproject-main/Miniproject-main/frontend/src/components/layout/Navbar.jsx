@@ -51,11 +51,15 @@ const Navbar = () => {
 
             {/* Right: Actions */}
             <div className="flex items-center gap-6">
-                {/* System Status */}
-                <div className="hidden md:flex items-center gap-2">
-                    <div className="w-2.5 h-2.5 rounded-full bg-neuro-success shadow-[0_0_8px_rgba(16,185,129,0.4)] animate-pulse"></div>
-                    <span className="text-sm font-medium text-neuro-text">Online | Encrypted</span>
-                </div>
+                {/* Notifications Bell */}
+                <button
+                    onClick={() => window.location.href = '/notifications'}
+                    className="relative p-2 rounded-xl text-neuro-muted hover:text-neuro-accent hover:bg-neuro-accent/10 transition-all group"
+                    title="Notifications"
+                >
+                    <Bell className="h-5 w-5" />
+                    <div className="absolute top-2 right-2.5 h-2 w-2 bg-neuro-danger rounded-full border-2 border-neuro-bg"></div>
+                </button>
 
                 {/* Profile */}
                 <div className="relative" ref={profileRef}>
