@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
             <Sidebar />
 
             <main className="pl-24 pt-24 min-h-screen relative z-10 transition-all duration-300">
-                <div className="p-6 h-[calc(100vh-6rem)] overflow-hidden">
+                <div className="p-6 h-[calc(100vh-6rem)] overflow-y-auto custom-scrollbar">
                     {children}
                 </div>
             </main>
