@@ -6,7 +6,7 @@
     "build": "cd frontend && npm install && npm run build",
     "start": "cd backend && node server.js",
     "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install",
-    "render-build": "cd frontend && npm install && npm run build && cd ../backend && npm install"
+    "render-build": "cd frontend && npm install && npm run build && cd ../backend && npm install && cd ../../../admin_portal/frontend && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
