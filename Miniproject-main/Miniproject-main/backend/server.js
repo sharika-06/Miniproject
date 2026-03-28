@@ -1062,7 +1062,7 @@ app.use('/api/settings', require('./admin_routes/settings'));
 // -----------------------------------
 
 // Serve Admin Portal frontend on /dashboard
-app.use('/dashboard', express.static(path.join(__dirname, '../../../admin_portal/frontend/dist')));
+app.use('/dashboard', express.static(path.join(__dirname, '../../../../admin_portal/frontend/dist')));
 
 // Serve Main Frontend statically
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
@@ -1076,7 +1076,7 @@ app.use((req, res) => {
     
     // Serve Admin Portal index for /dashboard routes
     if (req.url.startsWith('/dashboard')) {
-        return res.sendFile(path.join(__dirname, '../../../admin_portal/frontend/dist', 'index.html'));
+        return res.sendFile(path.join(__dirname, '../../../../admin_portal/frontend/dist', 'index.html'));
     }
     
     // Serve Main Frontend index for all other routes
