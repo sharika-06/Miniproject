@@ -1,431 +1,2509 @@
 {
     "nodes": [
         {
-            "id": "Alice Johnson",
-            "user": "Alice Johnson",
-            "risk": 69,
-            "accountNumber": "AN_A",
+            "id": "Alice",
+            "user": "Alice",
+            "risk": 49.33684695488917,
+            "accountNumber": "ACC-5000",
+            "metrics": {
+                "totalVolume": 12696.85,
+                "avgAmount": 634.8425,
+                "maxAmount": 9500,
+                "velocity": 0.0044444444444444444,
+                "transactionCount": 20,
+                "inCount": 9,
+                "outCount": 11
+            },
+            "riskDetails": {
+                "structural": "100.0",
+                "behavioral": "18.5",
+                "ml": "32.6",
+                "proximity": "40.0"
+            },
+            "color": "#FACC15"
+        },
+        {
+            "id": "Bob",
+            "user": "Bob",
+            "risk": 46.52954161570479,
+            "accountNumber": "ACC-5000",
+            "metrics": {
+                "totalVolume": 11030.95,
+                "avgAmount": 551.5475,
+                "maxAmount": 9500,
+                "velocity": 0.0044444444444444444,
+                "transactionCount": 20,
+                "inCount": 10,
+                "outCount": 10
+            },
+            "riskDetails": {
+                "structural": "100.0",
+                "behavioral": "16.1",
+                "ml": "32.3",
+                "proximity": "20.0"
+            },
+            "color": "#FACC15"
+        },
+        {
+            "id": "Charlie",
+            "user": "Charlie",
+            "risk": 46.30955466647449,
+            "accountNumber": "ACC-5001",
+            "metrics": {
+                "totalVolume": 10577,
+                "avgAmount": 528.85,
+                "maxAmount": 9500,
+                "velocity": 0.0044444444444444444,
+                "transactionCount": 20,
+                "inCount": 11,
+                "outCount": 9
+            },
+            "riskDetails": {
+                "structural": "100.0",
+                "behavioral": "15.5",
+                "ml": "32.2",
+                "proximity": "20.0"
+            },
+            "color": "#FACC15"
+        },
+        {
+            "id": "David",
+            "user": "David",
+            "risk": 44.29931013128783,
+            "accountNumber": "ACC-5002",
+            "metrics": {
+                "totalVolume": 10930.95,
+                "avgAmount": 575.3131578947368,
+                "maxAmount": 9500,
+                "velocity": 0.004222222222222222,
+                "transactionCount": 19,
+                "inCount": 11,
+                "outCount": 8
+            },
+            "riskDetails": {
+                "structural": "100.0",
+                "behavioral": "16.0",
+                "ml": "31.7",
+                "proximity": "0.0"
+            },
+            "color": "#FACC15"
+        },
+        {
+            "id": "Eve",
+            "user": "Eve",
+            "risk": 43.910408153173265,
+            "accountNumber": "ACC-5003",
+            "metrics": {
+                "totalVolume": 10877.75,
+                "avgAmount": 639.8676470588235,
+                "maxAmount": 9500,
+                "velocity": 0.003777777777777778,
+                "transactionCount": 17,
+                "inCount": 9,
+                "outCount": 8
+            },
+            "riskDetails": {
+                "structural": "100.0",
+                "behavioral": "15.9",
+                "ml": "30.5",
+                "proximity": "0.0"
+            },
+            "color": "#FACC15"
+        },
+        {
+            "id": "Frank",
+            "user": "Frank",
+            "risk": 38.90792923985679,
+            "accountNumber": "ACC-5004",
+            "metrics": {
+                "totalVolume": 940.2,
+                "avgAmount": 58.7625,
+                "maxAmount": 345.2,
+                "velocity": 0.0035555555555555557,
+                "transactionCount": 16,
+                "inCount": 8,
+                "outCount": 8
+            },
+            "riskDetails": {
+                "structural": "100.0",
+                "behavioral": "1.4",
+                "ml": "28.3",
+                "proximity": "0.0"
+            },
+            "color": "#FACC15"
+        },
+        {
+            "id": "Grace",
+            "user": "Grace",
+            "risk": 38.83394396426872,
+            "accountNumber": "ACC-5005",
+            "metrics": {
+                "totalVolume": 787.7,
+                "avgAmount": 49.23125,
+                "maxAmount": 345.2,
+                "velocity": 0.0035555555555555557,
+                "transactionCount": 16,
+                "inCount": 8,
+                "outCount": 8
+            },
+            "riskDetails": {
+                "structural": "100.0",
+                "behavioral": "1.2",
+                "ml": "28.2",
+                "proximity": "0.0"
+            },
+            "color": "#FACC15"
+        },
+        {
+            "id": "Heidi",
+            "user": "Heidi",
+            "risk": 39.28503582814932,
+            "accountNumber": "ACC-5006",
+            "metrics": {
+                "totalVolume": 1717.5,
+                "avgAmount": 107.34375,
+                "maxAmount": 890,
+                "velocity": 0.0035555555555555557,
+                "transactionCount": 16,
+                "inCount": 8,
+                "outCount": 8
+            },
+            "riskDetails": {
+                "structural": "100.0",
+                "behavioral": "2.6",
+                "ml": "28.4",
+                "proximity": "0.0"
+            },
+            "color": "#FACC15"
+        },
+        {
+            "id": "Ivan",
+            "user": "Ivan",
+            "risk": 39.54058824727075,
+            "accountNumber": "ACC-5007",
+            "metrics": {
+                "totalVolume": 2244.25,
+                "avgAmount": 140.265625,
+                "maxAmount": 890,
+                "velocity": 0.0035555555555555557,
+                "transactionCount": 16,
+                "inCount": 8,
+                "outCount": 8
+            },
+            "riskDetails": {
+                "structural": "100.0",
+                "behavioral": "3.3",
+                "ml": "28.5",
+                "proximity": "0.0"
+            },
+            "color": "#FACC15"
+        },
+        {
+            "id": "Judy",
+            "user": "Judy",
+            "risk": 39.26846797791107,
+            "accountNumber": "ACC-5008",
+            "metrics": {
+                "totalVolume": 1683.35,
+                "avgAmount": 105.209375,
+                "maxAmount": 560.1,
+                "velocity": 0.0035555555555555557,
+                "transactionCount": 16,
+                "inCount": 8,
+                "outCount": 8
+            },
+            "riskDetails": {
+                "structural": "100.0",
+                "behavioral": "2.5",
+                "ml": "28.4",
+                "proximity": "0.0"
+            },
+            "color": "#FACC15"
+        },
+        {
+            "id": "Loop_A",
+            "user": "Loop_A",
+            "risk": 31.24213562914018,
+            "accountNumber": "L-ACC-200",
+            "metrics": {
+                "totalVolume": 2000,
+                "avgAmount": 500,
+                "maxAmount": 500,
+                "velocity": 0.0008888888888888889,
+                "transactionCount": 4,
+                "inCount": 2,
+                "outCount": 2
+            },
+            "riskDetails": {
+                "structural": "80.0",
+                "behavioral": "2.9",
+                "ml": "21.2",
+                "proximity": "0.0"
+            },
+            "color": "#FACC15"
+        },
+        {
+            "id": "Loop_B",
+            "user": "Loop_B",
+            "risk": 31.24213562914018,
+            "accountNumber": "L-ACC-201",
+            "metrics": {
+                "totalVolume": 2000,
+                "avgAmount": 500,
+                "maxAmount": 500,
+                "velocity": 0.0008888888888888889,
+                "transactionCount": 4,
+                "inCount": 2,
+                "outCount": 2
+            },
+            "riskDetails": {
+                "structural": "80.0",
+                "behavioral": "2.9",
+                "ml": "21.2",
+                "proximity": "0.0"
+            },
+            "color": "#FACC15"
+        },
+        {
+            "id": "Loop_C",
+            "user": "Loop_C",
+            "risk": 31.24213562914018,
+            "accountNumber": "L-ACC-202",
+            "metrics": {
+                "totalVolume": 2000,
+                "avgAmount": 500,
+                "maxAmount": 500,
+                "velocity": 0.0008888888888888889,
+                "transactionCount": 4,
+                "inCount": 2,
+                "outCount": 2
+            },
+            "riskDetails": {
+                "structural": "80.0",
+                "behavioral": "2.9",
+                "ml": "21.2",
+                "proximity": "0.0"
+            },
+            "color": "#FACC15"
+        },
+        {
+            "id": "Outlier_User",
+            "user": "Outlier_User",
+            "risk": 56.06962804364252,
+            "accountNumber": "ACC-ANOM",
+            "metrics": {
+                "totalVolume": 47500,
+                "avgAmount": 9500,
+                "maxAmount": 9500,
+                "velocity": 0.0011111111111111111,
+                "transactionCount": 5,
+                "inCount": 1,
+                "outCount": 4
+            },
+            "riskDetails": {
+                "structural": "90.0",
+                "behavioral": "60.0",
+                "ml": "30.2",
+                "proximity": "20.0"
+            },
             "color": "#EA580C"
         },
         {
-            "id": "Bob Brown",
-            "user": "Bob Brown",
-            "risk": 2,
-            "accountNumber": "AN_B",
+            "id": "Retailer_Y",
+            "user": "Retailer_Y",
+            "risk": 67.47614387238066,
+            "accountNumber": "ACC-MKT",
+            "metrics": {
+                "totalVolume": 125000,
+                "avgAmount": 125000,
+                "maxAmount": 125000,
+                "velocity": 0.00022222222222222223,
+                "transactionCount": 1,
+                "inCount": 0,
+                "outCount": 1
+            },
+            "riskDetails": {
+                "structural": "75.0",
+                "behavioral": "60.0",
+                "ml": "56.6",
+                "proximity": "100.0"
+            },
             "color": "#EA580C"
         },
         {
-            "id": "Charlie Davis",
-            "user": "Charlie Davis",
-            "risk": 58,
-            "accountNumber": "AN_C",
+            "id": "Seed_X",
+            "user": "Seed_X",
+            "risk": 65.0114641875793,
+            "accountNumber": "ACC-SEED",
+            "metrics": {
+                "totalVolume": 126000,
+                "avgAmount": 63000,
+                "maxAmount": 125000,
+                "velocity": 0.00044444444444444447,
+                "transactionCount": 2,
+                "inCount": 1,
+                "outCount": 1
+            },
+            "riskDetails": {
+                "structural": "75.0",
+                "behavioral": "60.0",
+                "ml": "48.4",
+                "proximity": "100.0"
+            },
             "color": "#EA580C"
         },
         {
-            "id": "David Smith",
-            "user": "David Smith",
-            "risk": 3,
-            "accountNumber": "AN_D",
-            "color": "#EA580C"
+            "id": "Broker_Z",
+            "user": "Broker_Z",
+            "risk": 37.2969902667066,
+            "accountNumber": "ACC-BROKER",
+            "metrics": {
+                "totalVolume": 1800,
+                "avgAmount": 900,
+                "maxAmount": 1000,
+                "velocity": 0.00044444444444444447,
+                "transactionCount": 2,
+                "inCount": 1,
+                "outCount": 1
+            },
+            "riskDetails": {
+                "structural": "75.0",
+                "behavioral": "2.6",
+                "ml": "20.0",
+                "proximity": "80.0"
+            },
+            "color": "#FACC15"
         },
         {
-            "id": "Xavier",
-            "user": "Xavier",
-            "risk": 1,
-            "accountNumber": "AN_X",
-            "color": "#EA580C"
-        },
-        {
-            "id": "Yara",
-            "user": "Yara",
-            "risk": 46,
-            "accountNumber": "AN_Y",
-            "color": "#EA580C"
-        },
-        {
-            "id": "Zack",
-            "user": "Zack",
-            "risk": 86,
-            "accountNumber": "AN_Z",
-            "color": "#EA580C"
-        },
-        {
-            "id": "Eve Wilson",
-            "user": "Eve Wilson",
-            "risk": 17,
-            "accountNumber": "AN_E",
-            "color": "#EA580C"
-        },
-        {
-            "id": "User1",
-            "user": "User1",
-            "risk": 29,
-            "accountNumber": "AN_1",
-            "color": "#EA580C"
-        },
-        {
-            "id": "User2",
-            "user": "User2",
-            "risk": 64,
-            "accountNumber": "AN_2",
-            "color": "#EA580C"
-        },
-        {
-            "id": "User3",
-            "user": "User3",
-            "risk": 2,
-            "accountNumber": "AN_3",
-            "color": "#EA580C"
-        },
-        {
-            "id": "Frank Lee",
-            "user": "Frank Lee",
-            "risk": 58,
-            "accountNumber": "AN_F",
-            "color": "#EA580C"
-        },
-        {
-            "id": "Grace Ho",
-            "user": "Grace Ho",
-            "risk": 84,
-            "accountNumber": "AN_G",
-            "color": "#EA580C"
-        },
-        {
-            "id": "Hank M",
-            "user": "Hank M",
-            "risk": 86,
-            "accountNumber": "AN_H",
-            "color": "#EA580C"
+            "id": "Victim_V",
+            "user": "Victim_V",
+            "risk": 35.397822716871694,
+            "accountNumber": "ACC-VICTIM",
+            "metrics": {
+                "totalVolume": 2000,
+                "avgAmount": 1000,
+                "maxAmount": 1200,
+                "velocity": 0.00044444444444444447,
+                "transactionCount": 2,
+                "inCount": 1,
+                "outCount": 1
+            },
+            "riskDetails": {
+                "structural": "75.0",
+                "behavioral": "2.9",
+                "ml": "20.1",
+                "proximity": "60.0"
+            },
+            "color": "#FACC15"
         }
     ],
     "links": [
         {
-            "source": "Alice Johnson",
-            "target": "Alice Johnson",
+            "source": "Alice",
+            "target": "Bob",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T04:30:00.000Z"
+            "timestamp": "2023-10-01T04:30:00.000Z"
         },
         {
-            "source": "Bob Brown",
-            "target": "Bob Brown",
+            "source": "Bob",
+            "target": "Charlie",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T04:35:00.000Z"
+            "timestamp": "2023-10-01T05:30:00.000Z"
         },
         {
-            "source": "Charlie Davis",
-            "target": "Charlie Davis",
+            "source": "Charlie",
+            "target": "David",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T04:40:00.000Z"
+            "timestamp": "2023-10-01T06:30:00.000Z"
         },
         {
-            "source": "David Smith",
-            "target": "David Smith",
+            "source": "David",
+            "target": "Eve",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T04:45:00.000Z"
+            "timestamp": "2023-10-01T07:30:00.000Z"
         },
         {
-            "source": "Xavier",
-            "target": "Xavier",
+            "source": "Eve",
+            "target": "Frank",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T05:30:00.000Z"
+            "timestamp": "2023-10-01T08:30:00.000Z"
         },
         {
-            "source": "Yara",
-            "target": "Yara",
+            "source": "Frank",
+            "target": "Grace",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T05:35:00.000Z"
+            "timestamp": "2023-10-01T09:30:00.000Z"
         },
         {
-            "source": "Zack",
-            "target": "Zack",
+            "source": "Grace",
+            "target": "Heidi",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T05:40:00.000Z"
+            "timestamp": "2023-10-01T10:30:00.000Z"
         },
         {
-            "source": "Eve Wilson",
-            "target": "Eve Wilson",
+            "source": "Heidi",
+            "target": "Ivan",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T05:45:00.000Z"
+            "timestamp": "2023-10-01T11:30:00.000Z"
         },
         {
-            "source": "User1",
-            "target": "User1",
+            "source": "Ivan",
+            "target": "Judy",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T06:30:00.000Z"
+            "timestamp": "2023-10-01T12:30:00.000Z"
         },
         {
-            "source": "User2",
-            "target": "User2",
+            "source": "Judy",
+            "target": "Alice",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T06:35:00.000Z"
+            "timestamp": "2023-10-01T13:30:00.000Z"
         },
         {
-            "source": "User3",
-            "target": "User3",
+            "source": "Alice",
+            "target": "Charlie",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T06:40:00.000Z"
+            "timestamp": "2023-10-01T14:30:00.000Z"
         },
         {
-            "source": "Frank Lee",
-            "target": "Frank Lee",
+            "source": "Bob",
+            "target": "David",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T06:45:00.000Z"
+            "timestamp": "2023-10-01T15:30:00.000Z"
         },
         {
-            "source": "Alice Johnson",
-            "target": "Bob Brown",
+            "source": "Loop_A",
+            "target": "Loop_B",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T04:32:00.000Z"
+            "timestamp": "2023-10-02T04:30:00.000Z"
         },
         {
-            "source": "Bob Brown",
-            "target": "Charlie Davis",
+            "source": "Loop_B",
+            "target": "Loop_C",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T04:37:00.000Z"
+            "timestamp": "2023-10-02T04:40:00.000Z"
         },
         {
-            "source": "Charlie Davis",
-            "target": "Alice Johnson",
+            "source": "Loop_C",
+            "target": "Loop_A",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T04:42:00.000Z"
+            "timestamp": "2023-10-02T04:50:00.000Z"
         },
         {
-            "source": "Xavier",
-            "target": "Yara",
+            "source": "Loop_A",
+            "target": "Loop_B",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T05:32:00.000Z"
+            "timestamp": "2023-10-02T05:30:00.000Z"
         },
         {
-            "source": "Yara",
-            "target": "Zack",
+            "source": "Loop_B",
+            "target": "Loop_C",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T05:37:00.000Z"
+            "timestamp": "2023-10-02T05:40:00.000Z"
         },
         {
-            "source": "Zack",
-            "target": "Xavier",
+            "source": "Loop_C",
+            "target": "Loop_A",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T05:42:00.000Z"
+            "timestamp": "2023-10-02T05:50:00.000Z"
         },
         {
-            "source": "Grace Ho",
-            "target": "Grace Ho",
+            "source": "Alice",
+            "target": "Outlier_User",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T07:30:00.000Z"
+            "timestamp": "2023-10-03T04:30:00.000Z"
         },
         {
-            "source": "Hank M",
-            "target": "Hank M",
+            "source": "Outlier_User",
+            "target": "Bob",
             "color": "#FACC15",
-            "timestamp": "2024-02-19T08:30:00.000Z"
+            "timestamp": "2023-10-03T04:32:00.000Z"
+        },
+        {
+            "source": "Outlier_User",
+            "target": "Charlie",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T04:34:00.000Z"
+        },
+        {
+            "source": "Outlier_User",
+            "target": "David",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T04:36:00.000Z"
+        },
+        {
+            "source": "Outlier_User",
+            "target": "Eve",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T04:38:00.000Z"
+        },
+        {
+            "source": "Retailer_Y",
+            "target": "Seed_X",
+            "color": "#7F1D1D",
+            "timestamp": "2023-10-04T04:30:00.000Z"
+        },
+        {
+            "source": "Seed_X",
+            "target": "Broker_Z",
+            "color": "#FACC15",
+            "timestamp": "2023-10-04T05:30:00.000Z"
+        },
+        {
+            "source": "Broker_Z",
+            "target": "Victim_V",
+            "color": "#FACC15",
+            "timestamp": "2023-10-04T06:30:00.000Z"
+        },
+        {
+            "source": "Victim_V",
+            "target": "Alice",
+            "color": "#FACC15",
+            "timestamp": "2023-10-04T07:30:00.000Z"
+        },
+        {
+            "source": "Alice",
+            "target": "Bob",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T04:50:00.000Z"
+        },
+        {
+            "source": "Bob",
+            "target": "Charlie",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T04:55:00.000Z"
+        },
+        {
+            "source": "Charlie",
+            "target": "David",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T05:00:00.000Z"
+        },
+        {
+            "source": "David",
+            "target": "Eve",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T05:05:00.000Z"
+        },
+        {
+            "source": "Eve",
+            "target": "Frank",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T05:10:00.000Z"
+        },
+        {
+            "source": "Frank",
+            "target": "Grace",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T05:15:00.000Z"
+        },
+        {
+            "source": "Grace",
+            "target": "Heidi",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T05:20:00.000Z"
+        },
+        {
+            "source": "Heidi",
+            "target": "Ivan",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T05:25:00.000Z"
+        },
+        {
+            "source": "Ivan",
+            "target": "Judy",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T05:30:00.000Z"
+        },
+        {
+            "source": "Judy",
+            "target": "Alice",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T05:35:00.000Z"
+        },
+        {
+            "source": "Alice",
+            "target": "Bob",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T04:50:00.000Z"
+        },
+        {
+            "source": "Bob",
+            "target": "Charlie",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T04:55:00.000Z"
+        },
+        {
+            "source": "Charlie",
+            "target": "David",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T05:00:00.000Z"
+        },
+        {
+            "source": "David",
+            "target": "Eve",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T05:05:00.000Z"
+        },
+        {
+            "source": "Eve",
+            "target": "Frank",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T05:10:00.000Z"
+        },
+        {
+            "source": "Frank",
+            "target": "Grace",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T05:15:00.000Z"
+        },
+        {
+            "source": "Grace",
+            "target": "Heidi",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T05:20:00.000Z"
+        },
+        {
+            "source": "Heidi",
+            "target": "Ivan",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T05:25:00.000Z"
+        },
+        {
+            "source": "Ivan",
+            "target": "Judy",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T05:30:00.000Z"
+        },
+        {
+            "source": "Judy",
+            "target": "Alice",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T05:35:00.000Z"
+        },
+        {
+            "source": "Alice",
+            "target": "Bob",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T04:50:00.000Z"
+        },
+        {
+            "source": "Bob",
+            "target": "Charlie",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T04:55:00.000Z"
+        },
+        {
+            "source": "Charlie",
+            "target": "David",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T05:00:00.000Z"
+        },
+        {
+            "source": "David",
+            "target": "Eve",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T05:05:00.000Z"
+        },
+        {
+            "source": "Eve",
+            "target": "Frank",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T05:10:00.000Z"
+        },
+        {
+            "source": "Frank",
+            "target": "Grace",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T05:15:00.000Z"
+        },
+        {
+            "source": "Grace",
+            "target": "Heidi",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T05:20:00.000Z"
+        },
+        {
+            "source": "Heidi",
+            "target": "Ivan",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T05:25:00.000Z"
+        },
+        {
+            "source": "Ivan",
+            "target": "Judy",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T05:30:00.000Z"
+        },
+        {
+            "source": "Judy",
+            "target": "Alice",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T05:35:00.000Z"
+        },
+        {
+            "source": "Alice",
+            "target": "Bob",
+            "color": "#FACC15",
+            "timestamp": "2023-10-04T04:50:00.000Z"
+        },
+        {
+            "source": "Bob",
+            "target": "Charlie",
+            "color": "#FACC15",
+            "timestamp": "2023-10-04T04:55:00.000Z"
+        },
+        {
+            "source": "Charlie",
+            "target": "David",
+            "color": "#FACC15",
+            "timestamp": "2023-10-04T05:00:00.000Z"
+        },
+        {
+            "source": "David",
+            "target": "Eve",
+            "color": "#FACC15",
+            "timestamp": "2023-10-04T05:05:00.000Z"
+        },
+        {
+            "source": "Eve",
+            "target": "Frank",
+            "color": "#FACC15",
+            "timestamp": "2023-10-04T05:10:00.000Z"
+        },
+        {
+            "source": "Frank",
+            "target": "Grace",
+            "color": "#FACC15",
+            "timestamp": "2023-10-04T05:15:00.000Z"
+        },
+        {
+            "source": "Grace",
+            "target": "Heidi",
+            "color": "#FACC15",
+            "timestamp": "2023-10-04T05:20:00.000Z"
+        },
+        {
+            "source": "Heidi",
+            "target": "Ivan",
+            "color": "#FACC15",
+            "timestamp": "2023-10-04T05:25:00.000Z"
+        },
+        {
+            "source": "Ivan",
+            "target": "Judy",
+            "color": "#FACC15",
+            "timestamp": "2023-10-04T05:30:00.000Z"
+        },
+        {
+            "source": "Judy",
+            "target": "Alice",
+            "color": "#FACC15",
+            "timestamp": "2023-10-04T05:35:00.000Z"
+        },
+        {
+            "source": "Alice",
+            "target": "Bob",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T06:50:00.000Z"
+        },
+        {
+            "source": "Bob",
+            "target": "Charlie",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T06:55:00.000Z"
+        },
+        {
+            "source": "Charlie",
+            "target": "David",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T07:00:00.000Z"
+        },
+        {
+            "source": "David",
+            "target": "Eve",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T07:05:00.000Z"
+        },
+        {
+            "source": "Eve",
+            "target": "Frank",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T07:10:00.000Z"
+        },
+        {
+            "source": "Frank",
+            "target": "Grace",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T07:15:00.000Z"
+        },
+        {
+            "source": "Grace",
+            "target": "Heidi",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T07:20:00.000Z"
+        },
+        {
+            "source": "Heidi",
+            "target": "Ivan",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T07:25:00.000Z"
+        },
+        {
+            "source": "Ivan",
+            "target": "Judy",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T07:30:00.000Z"
+        },
+        {
+            "source": "Judy",
+            "target": "Alice",
+            "color": "#FACC15",
+            "timestamp": "2023-10-01T07:35:00.000Z"
+        },
+        {
+            "source": "Alice",
+            "target": "Bob",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T06:50:00.000Z"
+        },
+        {
+            "source": "Bob",
+            "target": "Charlie",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T06:55:00.000Z"
+        },
+        {
+            "source": "Charlie",
+            "target": "David",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T07:00:00.000Z"
+        },
+        {
+            "source": "David",
+            "target": "Eve",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T07:05:00.000Z"
+        },
+        {
+            "source": "Eve",
+            "target": "Frank",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T07:10:00.000Z"
+        },
+        {
+            "source": "Frank",
+            "target": "Grace",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T07:15:00.000Z"
+        },
+        {
+            "source": "Grace",
+            "target": "Heidi",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T07:20:00.000Z"
+        },
+        {
+            "source": "Heidi",
+            "target": "Ivan",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T07:25:00.000Z"
+        },
+        {
+            "source": "Ivan",
+            "target": "Judy",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T07:30:00.000Z"
+        },
+        {
+            "source": "Judy",
+            "target": "Alice",
+            "color": "#FACC15",
+            "timestamp": "2023-10-02T07:35:00.000Z"
+        },
+        {
+            "source": "Alice",
+            "target": "Bob",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T06:50:00.000Z"
+        },
+        {
+            "source": "Bob",
+            "target": "Charlie",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T06:55:00.000Z"
+        },
+        {
+            "source": "Charlie",
+            "target": "David",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T07:00:00.000Z"
+        },
+        {
+            "source": "David",
+            "target": "Eve",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T07:05:00.000Z"
+        },
+        {
+            "source": "Eve",
+            "target": "Frank",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T07:10:00.000Z"
+        },
+        {
+            "source": "Frank",
+            "target": "Grace",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T07:15:00.000Z"
+        },
+        {
+            "source": "Grace",
+            "target": "Heidi",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T07:20:00.000Z"
+        },
+        {
+            "source": "Heidi",
+            "target": "Ivan",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T07:25:00.000Z"
+        },
+        {
+            "source": "Ivan",
+            "target": "Judy",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T07:30:00.000Z"
+        },
+        {
+            "source": "Judy",
+            "target": "Alice",
+            "color": "#FACC15",
+            "timestamp": "2023-10-03T07:35:00.000Z"
+        },
+        {
+            "source": "Alice",
+            "target": "Bob",
+            "color": "#FACC15",
+            "timestamp": "2023-10-04T06:50:00.000Z"
+        },
+        {
+            "source": "Bob",
+            "target": "Charlie",
+            "color": "#FACC15",
+            "timestamp": "2023-10-04T06:55:00.000Z"
+        },
+        {
+            "source": "Charlie",
+            "target": "David",
+            "color": "#FACC15",
+            "timestamp": "2023-10-04T07:00:00.000Z"
         }
     ],
     "transactions": [
         {
-            "id": "tx-0-1771563710773",
-            "source": "Alice Johnson",
-            "target": "Alice Johnson",
-            "amount": 1000,
-            "timestamp": "2024-02-19T04:30:00.000Z",
+            "id": "TXN-00001",
+            "source": "Alice",
+            "target": "Bob",
+            "amount": 450.25,
+            "timestamp": "2023-10-01T04:30:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 24500,
+            "merchantId": "M-123",
+            "location": "London",
+            "senderName": "Alice",
+            "senderId": "U1000",
+            "senderAccountNo": "ACC-5000"
         },
         {
-            "id": "tx-12-1771563710788",
-            "source": "Alice Johnson",
-            "target": "Bob Brown",
-            "amount": 1000,
-            "timestamp": "2024-02-19T04:32:00.000Z",
+            "id": "TXN-00028",
+            "source": "Alice",
+            "target": "Bob",
+            "amount": 45.5,
+            "timestamp": "2023-10-01T04:50:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 1200,
+            "merchantId": "M-101",
+            "location": "Mumbai",
+            "senderName": "Alice",
+            "senderId": "U1000",
+            "senderAccountNo": "ACC-5000"
         },
         {
-            "id": "tx-1-1771563710774",
-            "source": "Bob Brown",
-            "target": "Bob Brown",
-            "amount": 1000,
-            "timestamp": "2024-02-19T04:35:00.000Z",
+            "id": "TXN-00029",
+            "source": "Bob",
+            "target": "Charlie",
+            "amount": 32,
+            "timestamp": "2023-10-01T04:55:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 1500,
+            "merchantId": "M-102",
+            "location": "Mumbai",
+            "senderName": "Bob",
+            "senderId": "U1001",
+            "senderAccountNo": "ACC-5001"
+        },
+        {
+            "id": "TXN-00030",
+            "source": "Charlie",
+            "target": "David",
+            "amount": 15,
+            "timestamp": "2023-10-01T05:00:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 800,
+            "merchantId": "M-103",
+            "location": "Mumbai",
+            "senderName": "Charlie",
+            "senderId": "U1002",
+            "senderAccountNo": "ACC-5002"
+        },
+        {
+            "id": "TXN-00031",
+            "source": "David",
+            "target": "Eve",
+            "amount": 60,
+            "timestamp": "2023-10-01T05:05:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 3400,
+            "merchantId": "M-104",
+            "location": "Mumbai",
+            "senderName": "David",
+            "senderId": "U1003",
+            "senderAccountNo": "ACC-5003"
         },
         {
-            "id": "tx-13-1771563710788",
-            "source": "Bob Brown",
-            "target": "Charlie Davis",
-            "amount": 1000,
-            "timestamp": "2024-02-19T04:37:00.000Z",
+            "id": "TXN-00032",
+            "source": "Eve",
+            "target": "Frank",
+            "amount": 21,
+            "timestamp": "2023-10-01T05:10:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 1500,
+            "merchantId": "M-105",
+            "location": "Mumbai",
+            "senderName": "Eve",
+            "senderId": "U1004",
+            "senderAccountNo": "ACC-5004"
+        },
+        {
+            "id": "TXN-00033",
+            "source": "Frank",
+            "target": "Grace",
+            "amount": 34,
+            "timestamp": "2023-10-01T05:15:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 2700,
+            "merchantId": "M-106",
+            "location": "Mumbai",
+            "senderName": "Frank",
+            "senderId": "U1005",
+            "senderAccountNo": "ACC-5005"
+        },
+        {
+            "id": "TXN-00034",
+            "source": "Grace",
+            "target": "Heidi",
+            "amount": 12,
+            "timestamp": "2023-10-01T05:20:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 1900,
+            "merchantId": "M-107",
+            "location": "Mumbai",
+            "senderName": "Grace",
+            "senderId": "U1006",
+            "senderAccountNo": "ACC-5006"
         },
         {
-            "id": "tx-2-1771563710777",
-            "source": "Charlie Davis",
-            "target": "Charlie Davis",
-            "amount": 1000,
-            "timestamp": "2024-02-19T04:40:00.000Z",
+            "id": "TXN-00035",
+            "source": "Heidi",
+            "target": "Ivan",
+            "amount": 89,
+            "timestamp": "2023-10-01T05:25:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 4300,
+            "merchantId": "M-108",
+            "location": "Mumbai",
+            "senderName": "Heidi",
+            "senderId": "U1007",
+            "senderAccountNo": "ACC-5007"
+        },
+        {
+            "id": "TXN-00002",
+            "source": "Bob",
+            "target": "Charlie",
+            "amount": 320.5,
+            "timestamp": "2023-10-01T05:30:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 12300,
+            "merchantId": "M-456",
+            "location": "Paris",
+            "senderName": "Bob",
+            "senderId": "U1001",
+            "senderAccountNo": "ACC-5001"
+        },
+        {
+            "id": "TXN-00036",
+            "source": "Ivan",
+            "target": "Judy",
+            "amount": 43,
+            "timestamp": "2023-10-01T05:30:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 3100,
+            "merchantId": "M-109",
+            "location": "Mumbai",
+            "senderName": "Ivan",
+            "senderId": "U1008",
+            "senderAccountNo": "ACC-5008"
+        },
+        {
+            "id": "TXN-00037",
+            "source": "Judy",
+            "target": "Alice",
+            "amount": 56,
+            "timestamp": "2023-10-01T05:35:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 2200,
+            "merchantId": "M-110",
+            "location": "Mumbai",
+            "senderName": "Judy",
+            "senderId": "U1009",
+            "senderAccountNo": "ACC-5009"
         },
         {
-            "id": "tx-14-1771563710788",
-            "source": "Charlie Davis",
-            "target": "Alice Johnson",
-            "amount": 1000,
-            "timestamp": "2024-02-19T04:42:00.000Z",
+            "id": "TXN-00003",
+            "source": "Charlie",
+            "target": "David",
+            "amount": 150,
+            "timestamp": "2023-10-01T06:30:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 8900,
+            "merchantId": "M-789",
+            "location": "Tokyo",
+            "senderName": "Charlie",
+            "senderId": "U1002",
+            "senderAccountNo": "ACC-5002"
+        },
+        {
+            "id": "TXN-00068",
+            "source": "Alice",
+            "target": "Bob",
+            "amount": 45.5,
+            "timestamp": "2023-10-01T06:50:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 1200,
+            "merchantId": "M-101",
+            "location": "London",
+            "senderName": "Alice",
+            "senderId": "U1000",
+            "senderAccountNo": "ACC-5000"
         },
         {
-            "id": "tx-3-1771563710783",
-            "source": "David Smith",
-            "target": "David Smith",
-            "amount": 50,
-            "timestamp": "2024-02-19T04:45:00.000Z",
+            "id": "TXN-00069",
+            "source": "Bob",
+            "target": "Charlie",
+            "amount": 32,
+            "timestamp": "2023-10-01T06:55:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 1500,
+            "merchantId": "M-102",
+            "location": "London",
+            "senderName": "Bob",
+            "senderId": "U1001",
+            "senderAccountNo": "ACC-5001"
+        },
+        {
+            "id": "TXN-00070",
+            "source": "Charlie",
+            "target": "David",
+            "amount": 15,
+            "timestamp": "2023-10-01T07:00:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 800,
+            "merchantId": "M-103",
+            "location": "London",
+            "senderName": "Charlie",
+            "senderId": "U1002",
+            "senderAccountNo": "ACC-5002"
+        },
+        {
+            "id": "TXN-00071",
+            "source": "David",
+            "target": "Eve",
+            "amount": 60,
+            "timestamp": "2023-10-01T07:05:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 3400,
+            "merchantId": "M-104",
+            "location": "London",
+            "senderName": "David",
+            "senderId": "U1003",
+            "senderAccountNo": "ACC-5003"
         },
         {
-            "id": "tx-4-1771563710787",
-            "source": "Xavier",
-            "target": "Xavier",
+            "id": "TXN-00072",
+            "source": "Eve",
+            "target": "Frank",
+            "amount": 21,
+            "timestamp": "2023-10-01T07:10:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 1500,
+            "merchantId": "M-105",
+            "location": "London",
+            "senderName": "Eve",
+            "senderId": "U1004",
+            "senderAccountNo": "ACC-5004"
+        },
+        {
+            "id": "TXN-00073",
+            "source": "Frank",
+            "target": "Grace",
+            "amount": 34,
+            "timestamp": "2023-10-01T07:15:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 2700,
+            "merchantId": "M-106",
+            "location": "London",
+            "senderName": "Frank",
+            "senderId": "U1005",
+            "senderAccountNo": "ACC-5005"
+        },
+        {
+            "id": "TXN-00074",
+            "source": "Grace",
+            "target": "Heidi",
+            "amount": 12,
+            "timestamp": "2023-10-01T07:20:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 1900,
+            "merchantId": "M-107",
+            "location": "London",
+            "senderName": "Grace",
+            "senderId": "U1006",
+            "senderAccountNo": "ACC-5006"
+        },
+        {
+            "id": "TXN-00075",
+            "source": "Heidi",
+            "target": "Ivan",
+            "amount": 89,
+            "timestamp": "2023-10-01T07:25:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 4300,
+            "merchantId": "M-108",
+            "location": "London",
+            "senderName": "Heidi",
+            "senderId": "U1007",
+            "senderAccountNo": "ACC-5007"
+        },
+        {
+            "id": "TXN-00004",
+            "source": "David",
+            "target": "Eve",
+            "amount": 600.75,
+            "timestamp": "2023-10-01T07:30:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 34000,
+            "merchantId": "M-101",
+            "location": "New York",
+            "senderName": "David",
+            "senderId": "U1003",
+            "senderAccountNo": "ACC-5003"
+        },
+        {
+            "id": "TXN-00076",
+            "source": "Ivan",
+            "target": "Judy",
+            "amount": 43,
+            "timestamp": "2023-10-01T07:30:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 3100,
+            "merchantId": "M-109",
+            "location": "London",
+            "senderName": "Ivan",
+            "senderId": "U1008",
+            "senderAccountNo": "ACC-5008"
+        },
+        {
+            "id": "TXN-00077",
+            "source": "Judy",
+            "target": "Alice",
+            "amount": 56,
+            "timestamp": "2023-10-01T07:35:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 2200,
+            "merchantId": "M-110",
+            "location": "London",
+            "senderName": "Judy",
+            "senderId": "U1009",
+            "senderAccountNo": "ACC-5009"
+        },
+        {
+            "id": "TXN-00005",
+            "source": "Eve",
+            "target": "Frank",
+            "amount": 210,
+            "timestamp": "2023-10-01T08:30:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 15600,
+            "merchantId": "M-202",
+            "location": "Berlin",
+            "senderName": "Eve",
+            "senderId": "U1004",
+            "senderAccountNo": "ACC-5004"
+        },
+        {
+            "id": "TXN-00006",
+            "source": "Frank",
+            "target": "Grace",
+            "amount": 345.2,
+            "timestamp": "2023-10-01T09:30:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 27800,
+            "merchantId": "M-303",
+            "location": "London",
+            "senderName": "Frank",
+            "senderId": "U1005",
+            "senderAccountNo": "ACC-5005"
+        },
+        {
+            "id": "TXN-00007",
+            "source": "Grace",
+            "target": "Heidi",
+            "amount": 120.5,
+            "timestamp": "2023-10-01T10:30:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 19000,
+            "merchantId": "M-404",
+            "location": "Mumbai",
+            "senderName": "Grace",
+            "senderId": "U1006",
+            "senderAccountNo": "ACC-5006"
+        },
+        {
+            "id": "TXN-00008",
+            "source": "Heidi",
+            "target": "Ivan",
+            "amount": 890,
+            "timestamp": "2023-10-01T11:30:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 43000,
+            "merchantId": "M-505",
+            "location": "Sydney",
+            "senderName": "Heidi",
+            "senderId": "U1007",
+            "senderAccountNo": "ACC-5007"
+        },
+        {
+            "id": "TXN-00009",
+            "source": "Ivan",
+            "target": "Judy",
+            "amount": 430.25,
+            "timestamp": "2023-10-01T12:30:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 31000,
+            "merchantId": "M-606",
+            "location": "Toronto",
+            "senderName": "Ivan",
+            "senderId": "U1008",
+            "senderAccountNo": "ACC-5008"
+        },
+        {
+            "id": "TXN-00010",
+            "source": "Judy",
+            "target": "Alice",
+            "amount": 560.1,
+            "timestamp": "2023-10-01T13:30:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 22000,
+            "merchantId": "M-707",
+            "location": "New York",
+            "senderName": "Judy",
+            "senderId": "U1009",
+            "senderAccountNo": "ACC-5009"
+        },
+        {
+            "id": "TXN-00011",
+            "source": "Alice",
+            "target": "Charlie",
+            "amount": 230.5,
+            "timestamp": "2023-10-01T14:30:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 14500,
+            "merchantId": "M-808",
+            "location": "London",
+            "senderName": "Alice",
+            "senderId": "U1000",
+            "senderAccountNo": "ACC-5000"
+        },
+        {
+            "id": "TXN-00012",
+            "source": "Bob",
+            "target": "David",
+            "amount": 140.2,
+            "timestamp": "2023-10-01T15:30:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 9800,
+            "merchantId": "M-909",
+            "location": "Paris",
+            "senderName": "Bob",
+            "senderId": "U1001",
+            "senderAccountNo": "ACC-5001"
+        },
+        {
+            "id": "TXN-00013",
+            "source": "Loop_A",
+            "target": "Loop_B",
             "amount": 500,
-            "timestamp": "2024-02-19T05:30:00.000Z",
+            "timestamp": "2023-10-02T04:30:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 5000,
+            "merchantId": "M-111",
+            "location": "London",
+            "senderName": "Loop_A",
+            "senderId": "L100",
+            "senderAccountNo": "L-ACC-200"
         },
         {
-            "id": "tx-15-1771563710788",
-            "source": "Xavier",
-            "target": "Yara",
+            "id": "TXN-00014",
+            "source": "Loop_B",
+            "target": "Loop_C",
             "amount": 500,
-            "timestamp": "2024-02-19T05:32:00.000Z",
+            "timestamp": "2023-10-02T04:40:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 5000,
+            "merchantId": "M-222",
+            "location": "London",
+            "senderName": "Loop_B",
+            "senderId": "L101",
+            "senderAccountNo": "L-ACC-201"
         },
         {
-            "id": "tx-5-1771563710787",
-            "source": "Yara",
-            "target": "Yara",
+            "id": "TXN-00015",
+            "source": "Loop_C",
+            "target": "Loop_A",
             "amount": 500,
-            "timestamp": "2024-02-19T05:35:00.000Z",
+            "timestamp": "2023-10-02T04:50:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 5000,
+            "merchantId": "M-333",
+            "location": "London",
+            "senderName": "Loop_C",
+            "senderId": "L102",
+            "senderAccountNo": "L-ACC-202"
         },
         {
-            "id": "tx-16-1771563710788",
-            "source": "Yara",
-            "target": "Zack",
+            "id": "TXN-00038",
+            "source": "Alice",
+            "target": "Bob",
+            "amount": 45.5,
+            "timestamp": "2023-10-02T04:50:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 1200,
+            "merchantId": "M-101",
+            "location": "Mumbai",
+            "senderName": "Alice",
+            "senderId": "U1000",
+            "senderAccountNo": "ACC-5000"
+        },
+        {
+            "id": "TXN-00039",
+            "source": "Bob",
+            "target": "Charlie",
+            "amount": 32,
+            "timestamp": "2023-10-02T04:55:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 1500,
+            "merchantId": "M-102",
+            "location": "Mumbai",
+            "senderName": "Bob",
+            "senderId": "U1001",
+            "senderAccountNo": "ACC-5001"
+        },
+        {
+            "id": "TXN-00040",
+            "source": "Charlie",
+            "target": "David",
+            "amount": 15,
+            "timestamp": "2023-10-02T05:00:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 800,
+            "merchantId": "M-103",
+            "location": "Mumbai",
+            "senderName": "Charlie",
+            "senderId": "U1002",
+            "senderAccountNo": "ACC-5002"
+        },
+        {
+            "id": "TXN-00041",
+            "source": "David",
+            "target": "Eve",
+            "amount": 60,
+            "timestamp": "2023-10-02T05:05:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 3400,
+            "merchantId": "M-104",
+            "location": "Mumbai",
+            "senderName": "David",
+            "senderId": "U1003",
+            "senderAccountNo": "ACC-5003"
+        },
+        {
+            "id": "TXN-00042",
+            "source": "Eve",
+            "target": "Frank",
+            "amount": 21,
+            "timestamp": "2023-10-02T05:10:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 1500,
+            "merchantId": "M-105",
+            "location": "Mumbai",
+            "senderName": "Eve",
+            "senderId": "U1004",
+            "senderAccountNo": "ACC-5004"
+        },
+        {
+            "id": "TXN-00043",
+            "source": "Frank",
+            "target": "Grace",
+            "amount": 34,
+            "timestamp": "2023-10-02T05:15:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 2700,
+            "merchantId": "M-106",
+            "location": "Mumbai",
+            "senderName": "Frank",
+            "senderId": "U1005",
+            "senderAccountNo": "ACC-5005"
+        },
+        {
+            "id": "TXN-00044",
+            "source": "Grace",
+            "target": "Heidi",
+            "amount": 12,
+            "timestamp": "2023-10-02T05:20:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 1900,
+            "merchantId": "M-107",
+            "location": "Mumbai",
+            "senderName": "Grace",
+            "senderId": "U1006",
+            "senderAccountNo": "ACC-5006"
+        },
+        {
+            "id": "TXN-00045",
+            "source": "Heidi",
+            "target": "Ivan",
+            "amount": 89,
+            "timestamp": "2023-10-02T05:25:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 4300,
+            "merchantId": "M-108",
+            "location": "Mumbai",
+            "senderName": "Heidi",
+            "senderId": "U1007",
+            "senderAccountNo": "ACC-5007"
+        },
+        {
+            "id": "TXN-00016",
+            "source": "Loop_A",
+            "target": "Loop_B",
             "amount": 500,
-            "timestamp": "2024-02-19T05:37:00.000Z",
+            "timestamp": "2023-10-02T05:30:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 5000,
+            "merchantId": "M-111",
+            "location": "London",
+            "senderName": "Loop_A",
+            "senderId": "L100",
+            "senderAccountNo": "L-ACC-200"
         },
         {
-            "id": "tx-6-1771563710787",
-            "source": "Zack",
-            "target": "Zack",
+            "id": "TXN-00046",
+            "source": "Ivan",
+            "target": "Judy",
+            "amount": 43,
+            "timestamp": "2023-10-02T05:30:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 3100,
+            "merchantId": "M-109",
+            "location": "Mumbai",
+            "senderName": "Ivan",
+            "senderId": "U1008",
+            "senderAccountNo": "ACC-5008"
+        },
+        {
+            "id": "TXN-00047",
+            "source": "Judy",
+            "target": "Alice",
+            "amount": 56,
+            "timestamp": "2023-10-02T05:35:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 2200,
+            "merchantId": "M-110",
+            "location": "Mumbai",
+            "senderName": "Judy",
+            "senderId": "U1009",
+            "senderAccountNo": "ACC-5009"
+        },
+        {
+            "id": "TXN-00017",
+            "source": "Loop_B",
+            "target": "Loop_C",
             "amount": 500,
-            "timestamp": "2024-02-19T05:40:00.000Z",
+            "timestamp": "2023-10-02T05:40:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 5000,
+            "merchantId": "M-222",
+            "location": "London",
+            "senderName": "Loop_B",
+            "senderId": "L101",
+            "senderAccountNo": "L-ACC-201"
         },
         {
-            "id": "tx-17-1771563710788",
-            "source": "Zack",
-            "target": "Xavier",
+            "id": "TXN-00018",
+            "source": "Loop_C",
+            "target": "Loop_A",
             "amount": 500,
-            "timestamp": "2024-02-19T05:42:00.000Z",
+            "timestamp": "2023-10-02T05:50:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 5000,
+            "merchantId": "M-333",
+            "location": "London",
+            "senderName": "Loop_C",
+            "senderId": "L102",
+            "senderAccountNo": "L-ACC-202"
         },
         {
-            "id": "tx-7-1771563710787",
-            "source": "Eve Wilson",
-            "target": "Eve Wilson",
-            "amount": 200,
-            "timestamp": "2024-02-19T05:45:00.000Z",
+            "id": "TXN-00078",
+            "source": "Alice",
+            "target": "Bob",
+            "amount": 45.5,
+            "timestamp": "2023-10-02T06:50:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 1200,
+            "merchantId": "M-101",
+            "location": "London",
+            "senderName": "Alice",
+            "senderId": "U1000",
+            "senderAccountNo": "ACC-5000"
         },
         {
-            "id": "tx-8-1771563710787",
-            "source": "User1",
-            "target": "User1",
-            "amount": 300,
-            "timestamp": "2024-02-19T06:30:00.000Z",
+            "id": "TXN-00079",
+            "source": "Bob",
+            "target": "Charlie",
+            "amount": 32,
+            "timestamp": "2023-10-02T06:55:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 1500,
+            "merchantId": "M-102",
+            "location": "London",
+            "senderName": "Bob",
+            "senderId": "U1001",
+            "senderAccountNo": "ACC-5001"
+        },
+        {
+            "id": "TXN-00080",
+            "source": "Charlie",
+            "target": "David",
+            "amount": 15,
+            "timestamp": "2023-10-02T07:00:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 800,
+            "merchantId": "M-103",
+            "location": "London",
+            "senderName": "Charlie",
+            "senderId": "U1002",
+            "senderAccountNo": "ACC-5002"
+        },
+        {
+            "id": "TXN-00081",
+            "source": "David",
+            "target": "Eve",
+            "amount": 60,
+            "timestamp": "2023-10-02T07:05:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 3400,
+            "merchantId": "M-104",
+            "location": "London",
+            "senderName": "David",
+            "senderId": "U1003",
+            "senderAccountNo": "ACC-5003"
         },
         {
-            "id": "tx-9-1771563710787",
-            "source": "User2",
-            "target": "User2",
-            "amount": 300,
-            "timestamp": "2024-02-19T06:35:00.000Z",
+            "id": "TXN-00082",
+            "source": "Eve",
+            "target": "Frank",
+            "amount": 21,
+            "timestamp": "2023-10-02T07:10:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 1500,
+            "merchantId": "M-105",
+            "location": "London",
+            "senderName": "Eve",
+            "senderId": "U1004",
+            "senderAccountNo": "ACC-5004"
+        },
+        {
+            "id": "TXN-00083",
+            "source": "Frank",
+            "target": "Grace",
+            "amount": 34,
+            "timestamp": "2023-10-02T07:15:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 2700,
+            "merchantId": "M-106",
+            "location": "London",
+            "senderName": "Frank",
+            "senderId": "U1005",
+            "senderAccountNo": "ACC-5005"
+        },
+        {
+            "id": "TXN-00084",
+            "source": "Grace",
+            "target": "Heidi",
+            "amount": 12,
+            "timestamp": "2023-10-02T07:20:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 1900,
+            "merchantId": "M-107",
+            "location": "London",
+            "senderName": "Grace",
+            "senderId": "U1006",
+            "senderAccountNo": "ACC-5006"
         },
         {
-            "id": "tx-10-1771563710787",
-            "source": "User3",
-            "target": "User3",
-            "amount": 300,
-            "timestamp": "2024-02-19T06:40:00.000Z",
+            "id": "TXN-00085",
+            "source": "Heidi",
+            "target": "Ivan",
+            "amount": 89,
+            "timestamp": "2023-10-02T07:25:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 4300,
+            "merchantId": "M-108",
+            "location": "London",
+            "senderName": "Heidi",
+            "senderId": "U1007",
+            "senderAccountNo": "ACC-5007"
+        },
+        {
+            "id": "TXN-00086",
+            "source": "Ivan",
+            "target": "Judy",
+            "amount": 43,
+            "timestamp": "2023-10-02T07:30:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 3100,
+            "merchantId": "M-109",
+            "location": "London",
+            "senderName": "Ivan",
+            "senderId": "U1008",
+            "senderAccountNo": "ACC-5008"
+        },
+        {
+            "id": "TXN-00087",
+            "source": "Judy",
+            "target": "Alice",
+            "amount": 56,
+            "timestamp": "2023-10-02T07:35:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 2200,
+            "merchantId": "M-110",
+            "location": "London",
+            "senderName": "Judy",
+            "senderId": "U1009",
+            "senderAccountNo": "ACC-5009"
         },
         {
-            "id": "tx-11-1771563710787",
-            "source": "Frank Lee",
-            "target": "Frank Lee",
-            "amount": 100,
-            "timestamp": "2024-02-19T06:45:00.000Z",
+            "id": "TXN-00019",
+            "source": "Alice",
+            "target": "Outlier_User",
+            "amount": 9500,
+            "timestamp": "2023-10-03T04:30:00.000Z",
+            "type": "Urgent Transfer",
+            "status": "Completed",
+            "accountBalance": 45000,
+            "merchantId": "M-999",
+            "location": "Berlin",
+            "senderName": "Alice",
+            "senderId": "U1000",
+            "senderAccountNo": "ACC-5000"
+        },
+        {
+            "id": "TXN-00020",
+            "source": "Outlier_User",
+            "target": "Bob",
+            "amount": 9500,
+            "timestamp": "2023-10-03T04:32:00.000Z",
+            "type": "Urgent Transfer",
+            "status": "Completed",
+            "accountBalance": 5000,
+            "merchantId": "M-999",
+            "location": "Berlin",
+            "senderName": "Outlier_User",
+            "senderId": "U-ANOM",
+            "senderAccountNo": "ACC-ANOM"
+        },
+        {
+            "id": "TXN-00021",
+            "source": "Outlier_User",
+            "target": "Charlie",
+            "amount": 9500,
+            "timestamp": "2023-10-03T04:34:00.000Z",
+            "type": "Urgent Transfer",
+            "status": "Completed",
+            "accountBalance": 5000,
+            "merchantId": "M-999",
+            "location": "Berlin",
+            "senderName": "Outlier_User",
+            "senderId": "U-ANOM",
+            "senderAccountNo": "ACC-ANOM"
+        },
+        {
+            "id": "TXN-00022",
+            "source": "Outlier_User",
+            "target": "David",
+            "amount": 9500,
+            "timestamp": "2023-10-03T04:36:00.000Z",
+            "type": "Urgent Transfer",
+            "status": "Completed",
+            "accountBalance": 5000,
+            "merchantId": "M-999",
+            "location": "Berlin",
+            "senderName": "Outlier_User",
+            "senderId": "U-ANOM",
+            "senderAccountNo": "ACC-ANOM"
+        },
+        {
+            "id": "TXN-00023",
+            "source": "Outlier_User",
+            "target": "Eve",
+            "amount": 9500,
+            "timestamp": "2023-10-03T04:38:00.000Z",
+            "type": "Urgent Transfer",
+            "status": "Completed",
+            "accountBalance": 5000,
+            "merchantId": "M-999",
+            "location": "Berlin",
+            "senderName": "Outlier_User",
+            "senderId": "U-ANOM",
+            "senderAccountNo": "ACC-ANOM"
+        },
+        {
+            "id": "TXN-00048",
+            "source": "Alice",
+            "target": "Bob",
+            "amount": 45.5,
+            "timestamp": "2023-10-03T04:50:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 1200,
+            "merchantId": "M-101",
+            "location": "Mumbai",
+            "senderName": "Alice",
+            "senderId": "U1000",
+            "senderAccountNo": "ACC-5000"
         },
         {
-            "id": "tx-18-1771563710788",
-            "source": "Grace Ho",
-            "target": "Grace Ho",
+            "id": "TXN-00049",
+            "source": "Bob",
+            "target": "Charlie",
+            "amount": 32,
+            "timestamp": "2023-10-03T04:55:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 1500,
+            "merchantId": "M-102",
+            "location": "Mumbai",
+            "senderName": "Bob",
+            "senderId": "U1001",
+            "senderAccountNo": "ACC-5001"
+        },
+        {
+            "id": "TXN-00050",
+            "source": "Charlie",
+            "target": "David",
+            "amount": 15,
+            "timestamp": "2023-10-03T05:00:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 800,
+            "merchantId": "M-103",
+            "location": "Mumbai",
+            "senderName": "Charlie",
+            "senderId": "U1002",
+            "senderAccountNo": "ACC-5002"
+        },
+        {
+            "id": "TXN-00051",
+            "source": "David",
+            "target": "Eve",
+            "amount": 60,
+            "timestamp": "2023-10-03T05:05:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 3400,
+            "merchantId": "M-104",
+            "location": "Mumbai",
+            "senderName": "David",
+            "senderId": "U1003",
+            "senderAccountNo": "ACC-5003"
+        },
+        {
+            "id": "TXN-00052",
+            "source": "Eve",
+            "target": "Frank",
+            "amount": 21,
+            "timestamp": "2023-10-03T05:10:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 1500,
+            "merchantId": "M-105",
+            "location": "Mumbai",
+            "senderName": "Eve",
+            "senderId": "U1004",
+            "senderAccountNo": "ACC-5004"
+        },
+        {
+            "id": "TXN-00053",
+            "source": "Frank",
+            "target": "Grace",
+            "amount": 34,
+            "timestamp": "2023-10-03T05:15:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 2700,
+            "merchantId": "M-106",
+            "location": "Mumbai",
+            "senderName": "Frank",
+            "senderId": "U1005",
+            "senderAccountNo": "ACC-5005"
+        },
+        {
+            "id": "TXN-00054",
+            "source": "Grace",
+            "target": "Heidi",
+            "amount": 12,
+            "timestamp": "2023-10-03T05:20:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 1900,
+            "merchantId": "M-107",
+            "location": "Mumbai",
+            "senderName": "Grace",
+            "senderId": "U1006",
+            "senderAccountNo": "ACC-5006"
+        },
+        {
+            "id": "TXN-00055",
+            "source": "Heidi",
+            "target": "Ivan",
+            "amount": 89,
+            "timestamp": "2023-10-03T05:25:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 4300,
+            "merchantId": "M-108",
+            "location": "Mumbai",
+            "senderName": "Heidi",
+            "senderId": "U1007",
+            "senderAccountNo": "ACC-5007"
+        },
+        {
+            "id": "TXN-00056",
+            "source": "Ivan",
+            "target": "Judy",
+            "amount": 43,
+            "timestamp": "2023-10-03T05:30:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 3100,
+            "merchantId": "M-109",
+            "location": "Mumbai",
+            "senderName": "Ivan",
+            "senderId": "U1008",
+            "senderAccountNo": "ACC-5008"
+        },
+        {
+            "id": "TXN-00057",
+            "source": "Judy",
+            "target": "Alice",
+            "amount": 56,
+            "timestamp": "2023-10-03T05:35:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 2200,
+            "merchantId": "M-110",
+            "location": "Mumbai",
+            "senderName": "Judy",
+            "senderId": "U1009",
+            "senderAccountNo": "ACC-5009"
+        },
+        {
+            "id": "TXN-00088",
+            "source": "Alice",
+            "target": "Bob",
+            "amount": 45.5,
+            "timestamp": "2023-10-03T06:50:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 1200,
+            "merchantId": "M-101",
+            "location": "London",
+            "senderName": "Alice",
+            "senderId": "U1000",
+            "senderAccountNo": "ACC-5000"
+        },
+        {
+            "id": "TXN-00089",
+            "source": "Bob",
+            "target": "Charlie",
+            "amount": 32,
+            "timestamp": "2023-10-03T06:55:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 1500,
+            "merchantId": "M-102",
+            "location": "London",
+            "senderName": "Bob",
+            "senderId": "U1001",
+            "senderAccountNo": "ACC-5001"
+        },
+        {
+            "id": "TXN-00090",
+            "source": "Charlie",
+            "target": "David",
+            "amount": 15,
+            "timestamp": "2023-10-03T07:00:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 800,
+            "merchantId": "M-103",
+            "location": "London",
+            "senderName": "Charlie",
+            "senderId": "U1002",
+            "senderAccountNo": "ACC-5002"
+        },
+        {
+            "id": "TXN-00091",
+            "source": "David",
+            "target": "Eve",
+            "amount": 60,
+            "timestamp": "2023-10-03T07:05:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 3400,
+            "merchantId": "M-104",
+            "location": "London",
+            "senderName": "David",
+            "senderId": "U1003",
+            "senderAccountNo": "ACC-5003"
+        },
+        {
+            "id": "TXN-00092",
+            "source": "Eve",
+            "target": "Frank",
+            "amount": 21,
+            "timestamp": "2023-10-03T07:10:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 1500,
+            "merchantId": "M-105",
+            "location": "London",
+            "senderName": "Eve",
+            "senderId": "U1004",
+            "senderAccountNo": "ACC-5004"
+        },
+        {
+            "id": "TXN-00093",
+            "source": "Frank",
+            "target": "Grace",
+            "amount": 34,
+            "timestamp": "2023-10-03T07:15:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 2700,
+            "merchantId": "M-106",
+            "location": "London",
+            "senderName": "Frank",
+            "senderId": "U1005",
+            "senderAccountNo": "ACC-5005"
+        },
+        {
+            "id": "TXN-00094",
+            "source": "Grace",
+            "target": "Heidi",
+            "amount": 12,
+            "timestamp": "2023-10-03T07:20:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 1900,
+            "merchantId": "M-107",
+            "location": "London",
+            "senderName": "Grace",
+            "senderId": "U1006",
+            "senderAccountNo": "ACC-5006"
+        },
+        {
+            "id": "TXN-00095",
+            "source": "Heidi",
+            "target": "Ivan",
+            "amount": 89,
+            "timestamp": "2023-10-03T07:25:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 4300,
+            "merchantId": "M-108",
+            "location": "London",
+            "senderName": "Heidi",
+            "senderId": "U1007",
+            "senderAccountNo": "ACC-5007"
+        },
+        {
+            "id": "TXN-00096",
+            "source": "Ivan",
+            "target": "Judy",
+            "amount": 43,
+            "timestamp": "2023-10-03T07:30:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 3100,
+            "merchantId": "M-109",
+            "location": "London",
+            "senderName": "Ivan",
+            "senderId": "U1008",
+            "senderAccountNo": "ACC-5008"
+        },
+        {
+            "id": "TXN-00097",
+            "source": "Judy",
+            "target": "Alice",
+            "amount": 56,
+            "timestamp": "2023-10-03T07:35:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 2200,
+            "merchantId": "M-110",
+            "location": "London",
+            "senderName": "Judy",
+            "senderId": "U1009",
+            "senderAccountNo": "ACC-5009"
+        },
+        {
+            "id": "TXN-00024",
+            "source": "Retailer_Y",
+            "target": "Seed_X",
+            "amount": 125000,
+            "timestamp": "2023-10-04T04:30:00.000Z",
+            "type": "Bulk Payment",
+            "status": "Suspicious",
+            "accountBalance": 150000,
+            "merchantId": "M-777",
+            "location": "Tokyo",
+            "senderName": "Retailer_Y",
+            "senderId": "U-MKT",
+            "senderAccountNo": "ACC-MKT"
+        },
+        {
+            "id": "TXN-00058",
+            "source": "Alice",
+            "target": "Bob",
+            "amount": 45.5,
+            "timestamp": "2023-10-04T04:50:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 1200,
+            "merchantId": "M-101",
+            "location": "Mumbai",
+            "senderName": "Alice",
+            "senderId": "U1000",
+            "senderAccountNo": "ACC-5000"
+        },
+        {
+            "id": "TXN-00059",
+            "source": "Bob",
+            "target": "Charlie",
+            "amount": 32,
+            "timestamp": "2023-10-04T04:55:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 1500,
+            "merchantId": "M-102",
+            "location": "Mumbai",
+            "senderName": "Bob",
+            "senderId": "U1001",
+            "senderAccountNo": "ACC-5001"
+        },
+        {
+            "id": "TXN-00060",
+            "source": "Charlie",
+            "target": "David",
+            "amount": 15,
+            "timestamp": "2023-10-04T05:00:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 800,
+            "merchantId": "M-103",
+            "location": "Mumbai",
+            "senderName": "Charlie",
+            "senderId": "U1002",
+            "senderAccountNo": "ACC-5002"
+        },
+        {
+            "id": "TXN-00061",
+            "source": "David",
+            "target": "Eve",
+            "amount": 60,
+            "timestamp": "2023-10-04T05:05:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 3400,
+            "merchantId": "M-104",
+            "location": "Mumbai",
+            "senderName": "David",
+            "senderId": "U1003",
+            "senderAccountNo": "ACC-5003"
+        },
+        {
+            "id": "TXN-00062",
+            "source": "Eve",
+            "target": "Frank",
+            "amount": 21,
+            "timestamp": "2023-10-04T05:10:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 1500,
+            "merchantId": "M-105",
+            "location": "Mumbai",
+            "senderName": "Eve",
+            "senderId": "U1004",
+            "senderAccountNo": "ACC-5004"
+        },
+        {
+            "id": "TXN-00063",
+            "source": "Frank",
+            "target": "Grace",
+            "amount": 34,
+            "timestamp": "2023-10-04T05:15:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 2700,
+            "merchantId": "M-106",
+            "location": "Mumbai",
+            "senderName": "Frank",
+            "senderId": "U1005",
+            "senderAccountNo": "ACC-5005"
+        },
+        {
+            "id": "TXN-00064",
+            "source": "Grace",
+            "target": "Heidi",
+            "amount": 12,
+            "timestamp": "2023-10-04T05:20:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 1900,
+            "merchantId": "M-107",
+            "location": "Mumbai",
+            "senderName": "Grace",
+            "senderId": "U1006",
+            "senderAccountNo": "ACC-5006"
+        },
+        {
+            "id": "TXN-00065",
+            "source": "Heidi",
+            "target": "Ivan",
+            "amount": 89,
+            "timestamp": "2023-10-04T05:25:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 4300,
+            "merchantId": "M-108",
+            "location": "Mumbai",
+            "senderName": "Heidi",
+            "senderId": "U1007",
+            "senderAccountNo": "ACC-5007"
+        },
+        {
+            "id": "TXN-00025",
+            "source": "Seed_X",
+            "target": "Broker_Z",
             "amount": 1000,
-            "timestamp": "2024-02-19T07:30:00.000Z",
+            "timestamp": "2023-10-04T05:30:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 12000,
+            "merchantId": "M-888",
+            "location": "Tokyo",
+            "senderName": "Seed_X",
+            "senderId": "U-SEED",
+            "senderAccountNo": "ACC-SEED"
         },
         {
-            "id": "tx-19-1771563710788",
-            "source": "Hank M",
-            "target": "Hank M",
-            "amount": 12.5,
-            "timestamp": "2024-02-19T08:30:00.000Z",
+            "id": "TXN-00066",
+            "source": "Ivan",
+            "target": "Judy",
+            "amount": 43,
+            "timestamp": "2023-10-04T05:30:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 3100,
+            "merchantId": "M-109",
+            "location": "Mumbai",
+            "senderName": "Ivan",
+            "senderId": "U1008",
+            "senderAccountNo": "ACC-5008"
+        },
+        {
+            "id": "TXN-00067",
+            "source": "Judy",
+            "target": "Alice",
+            "amount": 56,
+            "timestamp": "2023-10-04T05:35:00.000Z",
             "type": "Transfer",
             "status": "Completed",
-            "isLoop": false
+            "accountBalance": 2200,
+            "merchantId": "M-110",
+            "location": "Mumbai",
+            "senderName": "Judy",
+            "senderId": "U1009",
+            "senderAccountNo": "ACC-5009"
+        },
+        {
+            "id": "TXN-00026",
+            "source": "Broker_Z",
+            "target": "Victim_V",
+            "amount": 800,
+            "timestamp": "2023-10-04T06:30:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 5000,
+            "merchantId": "M-555",
+            "location": "Tokyo",
+            "senderName": "Broker_Z",
+            "senderId": "U-BROKER",
+            "senderAccountNo": "ACC-BROKER"
+        },
+        {
+            "id": "TXN-00098",
+            "source": "Alice",
+            "target": "Bob",
+            "amount": 45.5,
+            "timestamp": "2023-10-04T06:50:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 1200,
+            "merchantId": "M-101",
+            "location": "London",
+            "senderName": "Alice",
+            "senderId": "U1000",
+            "senderAccountNo": "ACC-5000"
+        },
+        {
+            "id": "TXN-00099",
+            "source": "Bob",
+            "target": "Charlie",
+            "amount": 32,
+            "timestamp": "2023-10-04T06:55:00.000Z",
+            "type": "Payment",
+            "status": "Completed",
+            "accountBalance": 1500,
+            "merchantId": "M-102",
+            "location": "London",
+            "senderName": "Bob",
+            "senderId": "U1001",
+            "senderAccountNo": "ACC-5001"
+        },
+        {
+            "id": "TXN-00100",
+            "source": "Charlie",
+            "target": "David",
+            "amount": 15,
+            "timestamp": "2023-10-04T07:00:00.000Z",
+            "type": "Withdrawal",
+            "status": "Completed",
+            "accountBalance": 800,
+            "merchantId": "M-103",
+            "location": "London",
+            "senderName": "Charlie",
+            "senderId": "U1002",
+            "senderAccountNo": "ACC-5002"
+        },
+        {
+            "id": "TXN-00027",
+            "source": "Victim_V",
+            "target": "Alice",
+            "amount": 1200,
+            "timestamp": "2023-10-04T07:30:00.000Z",
+            "type": "Transfer",
+            "status": "Completed",
+            "accountBalance": 15000,
+            "merchantId": "M-444",
+            "location": "Tokyo",
+            "senderName": "Victim_V",
+            "senderId": "U-VICTIM",
+            "senderAccountNo": "ACC-VICTIM"
         }
     ],
     "metadata": {
-        "minDate": "2024-02-19T04:30:00.000Z",
-        "maxDate": "2024-02-19T08:30:00.000Z",
-        "recordCount": 20
+        "minDate": "2023-10-01T04:30:00.000Z",
+        "maxDate": "2023-10-04T07:30:00.000Z",
+        "recordCount": 100
     }
 }
