@@ -53,7 +53,8 @@ export default function UploadPage() {
         setError('');
 
         try {
-            await api.uploadCsv(file);
+            const adminId = localStorage.getItem('userEmail') || 'anonymous';
+            await api.uploadCsv(file, adminId);
             navigate('/dashboard');
         } catch (err) {
             console.error('Upload error:', err);
