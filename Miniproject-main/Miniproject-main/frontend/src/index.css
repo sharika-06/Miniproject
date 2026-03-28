@@ -52,8 +52,8 @@
   body {
     @apply bg-neuro-bg text-neuro-text font-sans antialiased;
     /* Force dark background by default */
-    background-color: var(--color-bg);
-    color: var(--color-text);
+    background-color: rgb(var(--color-bg));
+    color: rgb(var(--color-text));
   }
 }
 
@@ -90,8 +90,8 @@
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -99,7 +99,9 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-400/50 dark:bg-slate-700 rounded-full;
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 10px;
+  border: 2px solid rgb(var(--color-bg));
 }
 
 ::-webkit-scrollbar-thumb:hover {
