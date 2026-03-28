@@ -1,49 +1,55 @@
 import React, { useState } from 'react';
-import { LayoutDashboard, FolderOpen, Network, Sliders, Calendar, DollarSign, Activity, FileText, Grid, List, Download } from 'lucide-react';
+import { LayoutDashboard, FolderOpen, Sliders, Calendar, DollarSign, Activity, FileText, Bell, HelpCircle, Download, ShieldAlert } from 'lucide-react';
 import { useDashboard } from '../../context/DashboardContext';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Sidebar = () => {
-    const { viewMode, setViewMode, triggerExport, dateRange, setDateRange, amountFilter, setAmountFilter } = useDashboard();
+    const { viewMode, setViewMode, triggerExport, setDateRange, amountFilter, setAmountFilter } = useDashboard();
     const [showAmountDropdown, setShowAmountDropdown] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const [isHovered, setIsHovered] = useState(false);
 
     const navItems = [
-        { label: 'Dashboard', icon: LayoutDashboard },
-        { label: 'CaseFiles', icon: FolderOpen },
-        { label: 'Settings', icon: Sliders },
+        { label: 'Dashboard', icon: LayoutDashboard, path: '/dashboard' },
+        { label: 'Cases', icon: FolderOpen, path: '/dashboard', viewMode: 'cases' },
+        { label: 'Risks', icon: ShieldAlert, path: '/dashboard', viewMode: 'risks' },
+        { label: 'Audit Log', icon: FileText, path: '/audit-log' },
+        { label: 'Notifications', icon: Bell, path: '/notifications' },
+        { label: 'Settings', icon: Sliders, path: '/settings' },
+        { label: 'Help', icon: HelpCircle, path: '/help' },
     ];
 
     return (
         <aside className="fixed left-4 top-24 bottom-4 w-20 hover:w-64 transition-all duration-300 group glass-panel z-50 flex flex-col font-sans rounded-2xl overflow-hidden">
             {/* Navigation */}
             <nav className="flex-1 overflow-y-auto py-6 flex flex-col gap-2">
-                {navItems.map((item) => (
-                    <button
-                        key={item.label}
-                        onClick={() => {
-                            if (item.label === 'Dashboard') setViewMode('graph');
-                            if (item.label === 'CaseFiles') setViewMode('cases');
-                        }}
-                        className={`w-full flex items-center gap-4 px-6 py-4 transition-all duration-200 relative
-                        ${(item.label === 'Dashboard' && (viewMode === 'graph' || viewMode === 'table' || viewMode === 'split')) ||
-                                (item.label === 'CaseFiles' && viewMode === 'cases')
-                                ? 'text-neuro-accent'
-                                : 'text-neuro-muted hover:text-white hover:bg-white/5'
-                            }`}
-                    >
-                        <item.icon className={`min-w-[20px] h-5 transition-colors ${(item.label === 'Dashboard' && (viewMode === 'graph' || viewMode === 'table' || viewMode === 'split')) ||
-                            (item.label === 'CaseFiles' && viewMode === 'cases') ? 'text-neuro-accent drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]' : 'text-neuro-muted'
-                            }`} />
-                        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap font-medium text-sm">
-                            {item.label}
-                        </span>
+                {navItems.map((item) => {
+                    const isAtPath = location.pathname === item.path || (item.path === '/dashboard' && location.pathname === '/upload');
+                    const isActive = isAtPath && (!item.viewMode || viewMode === item.viewMode);
+                    return (
+                        <button
+                            key={item.label}
+                            onClick={() => {
+                                navigate(item.path);
+                                if (item.viewMode) setViewMode(item.viewMode);
+                                else if (item.path === '/dashboard') setViewMode('graph');
+                            }}
+                            className={`w-full flex items-center gap-4 px-6 py-4 transition-all duration-200 relative
+                            ${isActive ? 'text-neuro-accent' : 'text-neuro-muted hover:text-white hover:bg-white/5'}`}
+                        >
+                            <item.icon className={`min-w-[20px] h-5 transition-colors ${isActive ? 'text-neuro-accent drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]' : 'text-neuro-muted'}`} />
+                            <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap font-medium text-sm">
+                                {item.label}
+                            </span>
 
-                        {/* Active Indicator Line */}
-                        {((item.label === 'Dashboard' && (viewMode === 'graph' || viewMode === 'table' || viewMode === 'split')) ||
-                            (item.label === 'CaseFiles' && viewMode === 'cases')) && (
+                            {/* Active Indicator Line */}
+                            {isActive && (
                                 <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-neuro-accent rounded-r-full shadow-[0_0_10px_#3B82F6]"></div>
                             )}
-                    </button>
-                ))}
+                        </button>
+                    );
+                })}
 
                 <div className="my-4 border-t border-neuro-border mx-4"></div>
 
