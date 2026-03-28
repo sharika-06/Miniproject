@@ -10,18 +10,22 @@ const NodeDetails = ({ node, transactions = [], onClose }) => {
     if (!node) return null;
 
     // Determine color based on risk score
-    let riskColor = '#94a3b8'; // Default Grey (Slate-400)
+    let riskColor = '#22c55e'; // Green
     let riskLabel = 'LOW RISK';
-    let riskBadgeStyle = 'bg-slate-500/20 text-slate-400 border-slate-500';
+    let riskBadgeStyle = 'bg-green-500/20 text-green-400 border-green-500';
 
-    if (node.risk > 67) {
+    if (node.risk > 80) {
         riskColor = '#ef4444'; // Red
         riskLabel = 'CRITICAL RISK';
         riskBadgeStyle = 'bg-neuro-danger/20 text-neuro-danger border-neuro-danger';
-    } else if (node.risk > 34) {
+    } else if (node.risk > 50) {
         riskColor = '#f97316'; // Orange
-        riskLabel = 'MODERATE RISK';
-        riskBadgeStyle = 'bg-neuro-warning/20 text-neuro-warning border-neuro-warning';
+        riskLabel = 'HIGH RISK';
+        riskBadgeStyle = 'bg-orange-500/20 text-orange-500 border-orange-500';
+    } else if (node.risk > 30) {
+        riskColor = '#facc15'; // Yellow
+        riskLabel = 'MEDIUM RISK';
+        riskBadgeStyle = 'bg-yellow-500/20 text-yellow-400 border-yellow-500';
     }
 
     // Mock Risk Score Data including the remaining part for the gauge
@@ -156,7 +160,7 @@ const NodeDetails = ({ node, transactions = [], onClose }) => {
                                     </PieChart>
                                 </ResponsiveContainer>
                                 <div className="absolute inset-0 flex flex-col items-center justify-end pb-2">
-                                    <span className="text-3xl font-bold text-white">{node.risk}</span>
+                                    <span className="text-3xl font-bold text-white">{Math.round(node.risk || 0)}</span>
                                     <span className="text-xs text-neuro-muted">/ 100</span>
                                 </div>
                             </div>
@@ -164,21 +168,77 @@ const NodeDetails = ({ node, transactions = [], onClose }) => {
                             <div className={`mt-2 px-3 py-1 rounded-full text-xs font-bold border ${riskBadgeStyle}`}>
                                 {riskLabel}
                             </div>
+
+                            {/* Risk Breakdown Bars */}
+                            {node.riskDetails && (
+                                <div className="w-full mt-6 space-y-3">
+                                    <h4 className="text-[10px] font-bold text-neuro-muted uppercase tracking-widest border-b border-neuro-border pb-1">Factor Breakdown</h4>
+
+                                    <div className="space-y-1">
+                                        <div className="flex justify-between text-[10px]">
+                                            <span className="text-neuro-muted">Structural (0.3)</span>
+                                            <span className="text-white font-mono">{node.riskDetails.structural}%</span>
+                                        </div>
+                                        <div className="h-1 bg-white/10 rounded-full overflow-hidden">
+                                            <div className="h-full bg-blue-500 transition-all duration-500" style={{ width: `${node.riskDetails.structural}%` }}></div>
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-1">
+                                        <div className="flex justify-between text-[10px]">
+                                            <span className="text-neuro-muted">Behavioral (0.3)</span>
+                                            <span className="text-white font-mono">{node.riskDetails.behavioral}%</span>
+                                        </div>
+                                        <div className="h-1 bg-white/10 rounded-full overflow-hidden">
+                                            <div className="h-full bg-orange-500 transition-all duration-500" style={{ width: `${node.riskDetails.behavioral}%` }}></div>
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-1">
+                                        <div className="flex justify-between text-[10px]">
+                                            <span className="text-neuro-muted">ML Anomaly (0.3)</span>
+                                            <span className="text-white font-mono">{node.riskDetails.ml}%</span>
+                                        </div>
+                                        <div className="h-1 bg-white/10 rounded-full overflow-hidden">
+                                            <div className="h-full bg-purple-500 transition-all duration-500" style={{ width: `${node.riskDetails.ml}%` }}></div>
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-1">
+                                        <div className="flex justify-between text-[10px]">
+                                            <span className="text-neuro-muted">Proximity (0.1)</span>
+                                            <span className="text-white font-mono">{node.riskDetails.proximity}%</span>
+                                        </div>
+                                        <div className="h-1 bg-white/10 rounded-full overflow-hidden">
+                                            <div className="h-full bg-neuro-danger transition-all duration-500" style={{ width: `${node.riskDetails.proximity}%` }}></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                         </div>
 
-                        {/* ML Flags */}
+                        {/* Analysis Indicators */}
                         <div className="space-y-2">
-                            <h3 className="text-xs font-semibold text-neuro-muted uppercase">ML Detected Flags</h3>
+                            <h3 className="text-xs font-semibold text-neuro-muted uppercase tracking-widest">Analysis Indicators</h3>
                             <div className="flex flex-wrap gap-2">
-                                <span className="px-2 py-1 rounded bg-slate-800 border border-slate-700 text-xs text-neuro-text flex items-center gap-1">
-                                    <AlertOctagon className="w-3 h-3 text-neuro-accent" /> Anomaly
-                                </span>
-                                <span className="px-2 py-1 rounded bg-slate-800 border border-slate-700 text-xs text-neuro-text">
-                                    Sudden Spike
-                                </span>
-                                {node.risk > 80 && (
-                                    <span className="px-2 py-1 rounded bg-neuro-danger/10 border border-neuro-danger/30 text-xs text-neuro-danger shadow-[0_0_10px_rgba(239,68,68,0.2)]">
-                                        Circular Pattern
+                                {node.riskDetails?.ml > 60 && (
+                                    <span className="px-2 py-1 rounded bg-purple-500/10 border border-purple-500/30 text-[10px] text-purple-400 flex items-center gap-1">
+                                        <AlertOctagon className="w-3 h-3" /> ML Outlier
+                                    </span>
+                                )}
+                                {node.riskDetails?.structural > 80 && (
+                                    <span className="px-2 py-1 rounded bg-blue-500/10 border border-blue-500/30 text-[10px] text-blue-400">
+                                        Strong Component
+                                    </span>
+                                )}
+                                {node.riskDetails?.behavioral > 70 && (
+                                    <span className="px-2 py-1 rounded bg-orange-500/10 border border-orange-500/30 text-[10px] text-orange-400">
+                                        High Velocity
+                                    </span>
+                                )}
+                                {node.riskDetails?.proximity > 80 && (
+                                    <span className="px-2 py-1 rounded bg-red-500/10 border border-red-500/30 text-[10px] text-red-400">
+                                        Danger Zone
                                     </span>
                                 )}
                             </div>
