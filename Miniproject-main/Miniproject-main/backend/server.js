@@ -1061,14 +1061,20 @@ app.use('/dashboard', express.static(path.join(__dirname, '../../../admin_portal
 // Serve Main Frontend statically
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
-// Catch-all for Admin Portal React router
-app.get('/dashboard/*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../../admin_portal/frontend/dist', 'index.html'));
-});
-
-// Catch-all route to serve the SPA for the Main App
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
+// Catch-all route to serve SPA logic
+app.use((req, res) => {
+    // Prevent API routes from returning HTML files
+    if (req.url.startsWith('/api')) {
+        return res.status(404).json({ success: false, message: 'API route not found' });
+    }
+    
+    // Serve Admin Portal index for /dashboard routes
+    if (req.url.startsWith('/dashboard')) {
+        return res.sendFile(path.join(__dirname, '../../../admin_portal/frontend/dist', 'index.html'));
+    }
+    
+    // Serve Main Frontend index for all other routes
+    return res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
 });
 
 app.listen(PORT, () => {
