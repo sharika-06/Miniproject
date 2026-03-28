@@ -59,9 +59,9 @@ export function UserProfileMenu({ onClose }) {
             </div>
 
             <div className="py-2">
-                <MenuItem icon={Settings} label="Account Settings" />
-                <MenuItem icon={Shield} label="Security & 2FA" />
-                <MenuItem icon={FileText} label="My Audit Log" />
+                <MenuItem icon={Settings} label="Account Settings" onClick={() => { navigate('/settings'); onClose(); }} />
+                <MenuItem icon={Shield} label="Security & 2FA" onClick={() => { navigate('/security'); onClose(); }} />
+                <MenuItem icon={FileText} label="My Audit Log" onClick={() => { navigate('/audit-log'); onClose(); }} />
 
                 <div className="h-px bg-neuro-border my-1 mx-4"></div>
 
@@ -75,8 +75,13 @@ export function UserProfileMenu({ onClose }) {
                         </div>
                     }
                 />
-                <MenuItem icon={Bell} label="Notifications" />
-                <MenuItem icon={HelpCircle} label="Help Center" />
+                <MenuItem icon={Bell} label="Notifications" onClick={() => { navigate('/notifications'); onClose(); }} />
+                <MenuItem icon={HelpCircle} label="Help Center" onClick={() => { navigate('/help'); onClose(); }} />
+
+                <div className="h-px bg-neuro-border my-1 mx-4"></div>
+
+                <MenuItem icon={Lock} label="Privacy Policy" onClick={() => { alert('Privacy Policy coming soon'); onClose(); }} />
+                <MenuItem icon={Activity} label="System Health" onClick={() => { alert('All systems operational'); onClose(); }} />
 
                 <div className="h-px bg-neuro-border my-1 mx-4"></div>
 
