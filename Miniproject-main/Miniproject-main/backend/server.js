@@ -1055,6 +1055,12 @@ app.post('/api/ai/chat', (req, res) => {
 
 // --- Serve Static Frontend (Production) ---
 
+// --- Admin Portal Backend Routes ---
+app.use('/api/admins', require('../../../admin_portal/backend/routes/admins'));
+app.use('/api/dashboard_data', require('../../../admin_portal/backend/routes/dashboard')); // Note: Assuming the route mounts handle their own internal paths.
+app.use('/api/settings', require('../../../admin_portal/backend/routes/settings'));
+// -----------------------------------
+
 // Serve Admin Portal frontend on /dashboard
 app.use('/dashboard', express.static(path.join(__dirname, '../../../admin_portal/frontend/dist')));
 
