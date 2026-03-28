@@ -3,6 +3,7 @@ import GraphCanvas from '../components/dashboard/GraphCanvas';
 import AlertsFeed from '../components/dashboard/AlertsFeed';
 import NodeDetails from '../components/dashboard/NodeDetails';
 import CaseFiles from '../components/dashboard/CaseFiles';
+import RiskAnalysis from '../components/dashboard/RiskAnalysis';
 import DashboardToolbar from '../components/dashboard/DashboardToolbar';
 import { TransactionTable } from '../components/TransactionTable';
 import { api } from '../services/api';
@@ -165,11 +166,18 @@ const Dashboard = () => {
 
     return (
         <div className="h-full flex flex-col gap-6 relative" id="dashboard-content">
+            {/* Top Toolbar */}
+            <DashboardToolbar
+                viewMode={viewMode}
+                setViewMode={setViewMode}
+                onExport={handleExport}
+            />
+
             {/* Bento Grid Layout - Vaulta Style */}
             <div className="flex-1 grid grid-cols-12 grid-rows-[auto_1fr] gap-6 min-h-0 p-2">
 
                 {/* Top Row: Metrics Cards (Bento Blocks) */}
-                {viewMode !== 'cases' && (
+                {!['cases', 'risks'].includes(viewMode) && (
                     <div className="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-6 h-28">
                         {/* Metric 1 */}
                         <div className="glass-panel rounded-2xl p-6 relative overflow-hidden group animate-fade-in-up" style={{ animationDelay: '0ms' }}>
@@ -220,9 +228,11 @@ const Dashboard = () => {
                 )}
 
                 {/* Main Content Area (Hero Graph / Tables) */}
-                <div className={`transition-all duration-300 ${viewMode !== 'cases' ? 'col-span-12 lg:col-span-9' : 'col-span-12'} h-full min-h-0`}>
+                <div className={`transition-all duration-300 ${!['cases', 'risks'].includes(viewMode) ? 'col-span-12 lg:col-span-9' : 'col-span-12'} h-full min-h-0`}>
                     {viewMode === 'cases' ? (
                         <CaseFiles />
+                    ) : viewMode === 'risks' ? (
+                        <RiskAnalysis />
                     ) : (
                         <div className="h-full glass-panel rounded-2xl relative overflow-hidden flex flex-col shadow-2xl animate-fade-in-up" style={{ animationDelay: '300ms' }}>
                             {/* Header / Tabs */}
@@ -237,7 +247,7 @@ const Dashboard = () => {
                             </div>
 
                             {/* View Content */}
-                            <div className="flex-1 relative overflow-hidden bg-neuro-bg/40">
+                            <div className="flex-1 relative overflow-hidden bg-neuro-bg/40 flex flex-col">
                                 {/* Darker background for graph container as requested */}
                                 {viewMode === 'graph' && (
                                     <GraphCanvas
@@ -254,7 +264,7 @@ const Dashboard = () => {
                                         <div className="border-r border-neuro-border relative bg-neuro-bg/40">
                                             <GraphCanvas graphData={filteredData} onNodeClick={handleNodeClick} focusNodes={focusNodes} />
                                         </div>
-                                        <div className="overflow-hidden bg-neuro-bg/50">
+                                        <div className="overflow-hidden bg-neuro-bg/50 flex flex-col min-h-0">
                                             <TransactionTable transactions={filteredData.transactions} />
                                         </div>
                                     </div>
@@ -284,19 +294,18 @@ const Dashboard = () => {
                 </div >
 
                 {/* Right Sidebar: Live Alerts */}
-                {
-                    viewMode !== 'cases' && (
-                        <div className="col-span-12 lg:col-span-3 h-full glass-panel rounded-2xl overflow-hidden shadow-xl flex flex-col animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-                            <div className="p-4 border-b border-white/5 bg-white/5 backdrop-blur-md">
-                                <h3 className="text-xs font-bold text-neuro-text uppercase tracking-widest flex items-center gap-2">
-                                    <Activity className="w-4 h-4 text-neuro-danger" /> Live Alerts
-                                </h3>
-                            </div>
-                            <div className="flex-1 overflow-hidden relative">
-                                <AlertsFeed alerts={alerts} onLocate={locateLoop} />
-                            </div>
+                {!['cases', 'risks'].includes(viewMode) && (
+                    <div className="col-span-12 lg:col-span-3 h-full glass-panel rounded-2xl overflow-hidden shadow-xl flex flex-col animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+                        <div className="p-4 border-b border-white/5 bg-white/5 backdrop-blur-md">
+                            <h3 className="text-xs font-bold text-neuro-text uppercase tracking-widest flex items-center gap-2">
+                                <Activity className="w-4 h-4 text-neuro-danger" /> Live Alerts
+                            </h3>
                         </div>
-                    )
+                        <div className="flex-1 overflow-hidden relative">
+                            <AlertsFeed alerts={alerts} onLocate={locateLoop} />
+                        </div>
+                    </div>
+                )
                 }
             </div >
 
