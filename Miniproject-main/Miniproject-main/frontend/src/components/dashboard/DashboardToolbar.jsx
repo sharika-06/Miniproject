@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, List, Columns, Download } from 'lucide-react';
+import { Layout, List, Columns, Download, FolderOpen, ShieldAlert } from 'lucide-react';
 import { Button } from '../ui/Button';
 
 const DashboardToolbar = ({ viewMode, setViewMode, onExport }) => {
@@ -10,8 +10,8 @@ const DashboardToolbar = ({ viewMode, setViewMode, onExport }) => {
                 <button
                     onClick={() => setViewMode('graph')}
                     className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-all ${viewMode === 'graph'
-                            ? 'bg-neuro-accent text-white shadow-lg shadow-cyan-500/20'
-                            : 'text-slate-400 hover:text-white hover:bg-slate-700'
+                        ? 'bg-neuro-accent text-white shadow-lg shadow-cyan-500/20'
+                        : 'text-slate-400 hover:text-white hover:bg-slate-700'
                         }`}
                 >
                     <Layout size={16} />
@@ -20,8 +20,8 @@ const DashboardToolbar = ({ viewMode, setViewMode, onExport }) => {
                 <button
                     onClick={() => setViewMode('table')}
                     className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-all ${viewMode === 'table'
-                            ? 'bg-neuro-accent text-white shadow-lg shadow-cyan-500/20'
-                            : 'text-slate-400 hover:text-white hover:bg-slate-700'
+                        ? 'bg-neuro-accent text-white shadow-lg shadow-cyan-500/20'
+                        : 'text-slate-400 hover:text-white hover:bg-slate-700'
                         }`}
                 >
                     <List size={16} />
@@ -30,12 +30,32 @@ const DashboardToolbar = ({ viewMode, setViewMode, onExport }) => {
                 <button
                     onClick={() => setViewMode('split')}
                     className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-all ${viewMode === 'split'
-                            ? 'bg-neuro-accent text-white shadow-lg shadow-cyan-500/20'
-                            : 'text-slate-400 hover:text-white hover:bg-slate-700'
+                        ? 'bg-neuro-accent text-white shadow-lg shadow-cyan-500/20'
+                        : 'text-slate-400 hover:text-white hover:bg-slate-700'
                         }`}
                 >
                     <Columns size={16} />
                     <span>Split</span>
+                </button>
+                <button
+                    onClick={() => setViewMode('cases')}
+                    className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-all ${viewMode === 'cases'
+                        ? 'bg-neuro-accent text-white shadow-lg shadow-cyan-500/20'
+                        : 'text-slate-400 hover:text-white hover:bg-slate-700'
+                        }`}
+                >
+                    <FolderOpen size={16} />
+                    <span>Cases</span>
+                </button>
+                <button
+                    onClick={() => setViewMode('risks')}
+                    className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-all ${viewMode === 'risks'
+                        ? 'bg-neuro-accent text-white shadow-lg shadow-cyan-500/20'
+                        : 'text-slate-400 hover:text-white hover:bg-slate-700'
+                        }`}
+                >
+                    <ShieldAlert size={16} />
+                    <span>Risks</span>
                 </button>
             </div>
 
