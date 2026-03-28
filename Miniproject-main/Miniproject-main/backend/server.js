@@ -5,6 +5,7 @@ const path = require('path');
 const db = require('./config/db');
 const { spawn } = require('child_process');
 const nodemailer = require('nodemailer');
+const bcrypt = require('bcryptjs');
 
 let Graph, scc, centrality;
 try {
@@ -60,11 +61,15 @@ app.post('/api/auth/login', async (req, res) => {
     const { mailId, password } = req.body;
 
     try {
-        // Authenticate using admin_portal database
-        const [rows] = await db.query("SELECT * FROM admin_portal.users WHERE email = ? AND password_hash = ? AND status = 'active'", [mailId, password]);
-        console.log('[DEBUG] Auth Query Result (rows.length):', rows.length);
-
+        // Authenticate using database
+        const [rows] = await db.query("SELECT * FROM users WHERE email = ? AND status = 'active'", [mailId]);
+        let isValidPassword = false;
         if (rows.length > 0) {
+            isValidPassword = await bcrypt.compare(password, rows[0].password_hash);
+        }
+        console.log('[DEBUG] Auth isValidPassword:', isValidPassword);
+
+        if (isValidPassword) {
             const user = rows[0];
             console.log('[DEBUG] Auth success for user:', user.email);
 
@@ -74,18 +79,18 @@ app.post('/api/auth/login', async (req, res) => {
                 console.log('[DEBUG] Inserting into Login_user with:', logParams);
 
                 await db.query(`
-                    INSERT INTO miniproject_main.Login_user 
+                    INSERT INTO Login_user 
                     (user_name, mail_id, employee_code, role, login_time) 
                     VALUES (?, ?, ?, ?, NOW())
                 `, logParams);
 
                 // ALSO record in Audit_Logs for the new page
                 await db.query(`
-                    INSERT INTO miniproject_main.Audit_Logs (user_email, action, details)
+                    INSERT INTO Audit_Logs (user_email, action, details)
                     VALUES (?, ?, ?)
                 `, [user.email, 'Login', `User logged in from ${req.headers['user-agent']}`]);
 
-                console.log(`[BACKEND] Login logged successfully in miniproject_main.Login_user and Audit_Logs`);
+                console.log(`[BACKEND] Login logged successfully in Login_user and Audit_Logs`);
             } catch (logErr) {
                 console.error('[ERROR] Login logging failed:', logErr.message);
             }
