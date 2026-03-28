@@ -44,9 +44,10 @@ const GraphCanvas = ({ graphData, onNodeClick, focusNodes }) => {
                 graphData={graphData}
                 nodeLabel="id"
                 nodeColor={node => {
-                    if (node.risk > 67) return '#ef4444'; // Red
-                    if (node.risk > 34) return '#f97316'; // Orange
-                    return '#94a3b8'; // Grey
+                    if (node.risk > 80) return '#ef4444'; // Red (Critical)
+                    if (node.risk > 50) return '#f97316'; // Orange (High)
+                    if (node.risk > 30) return '#facc15'; // Yellow (Medium)
+                    return '#22c55e'; // Green (Low)
                 }}
                 nodeRelSize={6}
                 linkColor={() => 'rgba(255,255,255,0.15)'}
