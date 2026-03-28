@@ -39,7 +39,10 @@ let tempOtp = {}; // { email: otp_code }
 
 // --- Nodemailer Transporter Setup ---
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    family: 4, // Force IPv4 routing strictly (Fixes Render ENETUNREACH IPv6 issue)
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS
